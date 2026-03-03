@@ -225,7 +225,9 @@ jobs:
 
   # ============================================================
   # STAGE 4: DEPLOY DEV
-  # Automated deployment, smoke tests
+  # Phase 1 — Terraform: Provision AKS + Azure SQL + ACR
+  # Phase 2 — Deploy app to AKS dev namespace
+  # Phase 3 — Smoke tests
   # ============================================================
   deploy-dev:
     name: '🚀 Deploy Dev'
@@ -233,43 +235,132 @@ jobs:
     needs: [test, security]
     if: github.ref == 'refs/heads/main'
     environment: development
+    env:
+      TF_WORKING_DIR: terraform
+      ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
+      ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
+      ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
+      ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+
+      # ----------------------------------------------------------
+      # PHASE 1: Terraform — Provision Azure Infrastructure
+      # Creates: Resource Group, Azure SQL, ACR, AKS cluster
+      # ----------------------------------------------------------
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: '1.7.x'
 
       - name: Azure Login
         uses: azure/login@v2
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-      - name: Set AKS context
-        uses: azure/aks-set-context@v4
-        with:
-          resource-group: ${{ env.RESOURCE_GROUP }}
-          cluster-name: ${{ env.AKS_CLUSTER_NAME }}
-
-      - name: Create dev namespace
-        run: kubectl create namespace flipkart-dev --dry-run=client -o yaml | kubectl apply -f -
-
-      - name: Deploy to Dev
+      - name: Terraform Init
+        working-directory: ${{ env.TF_WORKING_DIR }}
         run: |
-          # Update image tags
-          sed -i 's|flipkartacr.azurecr.io/flipkart-api:latest|${{ env.ACR_LOGIN_SERVER }}/${{ env.API_IMAGE }}:${{ github.sha }}|g' k8s/api-deployment.yaml
-          sed -i 's|namespace: flipkart|namespace: flipkart-dev|g' k8s/api-deployment.yaml k8s/services.yaml
+          echo "🔧 Initializing Terraform with remote backend..."
+          terraform init \
+            -backend-config="resource_group_name=flipkart-tfstate-rg" \
+            -backend-config="storage_account_name=flipkarttfstate" \
+            -backend-config="container_name=tfstate" \
+            -backend-config="key=flipkartapp-dev.terraform.tfstate"
+
+      - name: Terraform Validate
+        working-directory: ${{ env.TF_WORKING_DIR }}
+        run: |
+          echo "✅ Validating Terraform configuration..."
+          terraform validate
+
+      - name: Terraform Plan
+        id: tf-plan
+        working-directory: ${{ env.TF_WORKING_DIR }}
+        run: |
+          echo "📋 Planning infrastructure changes..."
+          terraform plan \
+            -var="resource_group_name=flipkartapp-dev-rg" \
+            -var="location=East US" \
+            -var="sql_server_name=flipkartapp-dev-sql" \
+            -var="sql_db_name=FlipkartAppDevDb" \
+            -var="sql_admin_login=${{ secrets.SQL_ADMIN_LOGIN }}" \
+            -var="sql_admin_password=${{ secrets.SQL_ADMIN_PASSWORD }}" \
+            -var="acr_name=flipkartdevacr" \
+            -var="aks_cluster_name=flipkartapp-dev-aks" \
+            -var="aks_dns_prefix=flipkartdev" \
+            -var="aks_node_count=2" \
+            -var="aks_vm_size=Standard_B2s" \
+            -out=tfplan-dev \
+            -detailed-exitcode || echo "TF_EXIT=$?" >> $GITHUB_ENV
+
+      - name: Terraform Apply — Provision AKS & Azure SQL
+        working-directory: ${{ env.TF_WORKING_DIR }}
+        run: |
+          echo "🚀 Applying Terraform plan — provisioning Azure infrastructure..."
+          terraform apply -auto-approve tfplan-dev
+          
+          echo "📤 Capturing Terraform outputs..."
+          AKS_NAME=$(terraform output -raw aks_cluster_name)
+          SQL_FQDN=$(terraform output -raw sql_server_fqdn)
+          ACR_SERVER=$(terraform output -raw acr_login_server)
+          
+          echo "AKS_CLUSTER_NAME_DEV=${AKS_NAME}" >> $GITHUB_ENV
+          echo "SQL_FQDN_DEV=${SQL_FQDN}" >> $GITHUB_ENV
+          echo "ACR_LOGIN_SERVER_DEV=${ACR_SERVER}" >> $GITHUB_ENV
+          
+          echo "✅ Infrastructure provisioned:"
+          echo "   AKS : ${AKS_NAME}"
+          echo "   SQL : ${SQL_FQDN}"
+          echo "   ACR : ${ACR_SERVER}"
+
+      - name: Retrieve AKS Kubeconfig
+        run: |
+          echo "🔑 Retrieving AKS credentials..."
+          az aks get-credentials \
+            --resource-group flipkartapp-dev-rg \
+            --name flipkartapp-dev-aks \
+            --overwrite-existing
+          kubectl cluster-info
+          echo "✅ AKS context configured"
+
+      # ----------------------------------------------------------
+      # PHASE 2: Create K8s Namespace & Deploy Application
+      # ----------------------------------------------------------
+      - name: Create dev namespace and secrets
+        run: |
+          kubectl create namespace flipkart-dev --dry-run=client -o yaml | kubectl apply -f -
+
+          # Create DB connection secret using the known dev SQL server name
+          SQL_CONN="Server=tcp:flipkartapp-dev-sql.database.windows.net,1433;Initial Catalog=FlipkartAppDevDb;User ID=${{ secrets.SQL_ADMIN_LOGIN }};Password=${{ secrets.SQL_ADMIN_PASSWORD }};Encrypt=True;TrustServerCertificate=False;"
+          kubectl create secret generic flipkart-secrets \
+            --from-literal=db-connection-string="${SQL_CONN}" \
+            -n flipkart-dev \
+            --dry-run=client -o yaml | kubectl apply -f -
+
+      - name: Deploy to Dev AKS
+        run: |
+          ACR=flipkartdevacr.azurecr.io
+          
+          # Patch image tags with the built SHA
+          sed -i "s|flipkartacr.azurecr.io/flipkart-api:latest|${ACR}/${{ env.API_IMAGE }}:${{ github.sha }}|g" k8s/api-deployment.yaml
+          sed -i "s|flipkartacr.azurecr.io/flipkart-web:latest|${ACR}/${{ env.WEB_IMAGE }}:${{ github.sha }}|g" k8s/api-deployment.yaml
+          sed -i 's|namespace: flipkart$|namespace: flipkart-dev|g' k8s/api-deployment.yaml k8s/services.yaml
           
           kubectl apply -f k8s/api-deployment.yaml -n flipkart-dev
           kubectl apply -f k8s/services.yaml -n flipkart-dev
           
-          # Wait for rollout
+          # Wait for both deployments to be ready
           kubectl rollout status deployment/flipkart-api -n flipkart-dev --timeout=300s
           kubectl rollout status deployment/flipkart-web -n flipkart-dev --timeout=300s
+          echo "✅ Application deployed to dev AKS"
 
+      # ----------------------------------------------------------
+      # PHASE 3: Smoke Tests
+      # ----------------------------------------------------------
       - name: Smoke Tests
         run: |
-          # Get service endpoint
-          API_URL=$(kubectl get svc flipkart-api-svc -n flipkart-dev -o jsonpath='{.spec.clusterIP}')
-          
-          # Run smoke tests via kubectl exec
           kubectl run smoke-test --image=curlimages/curl --rm -i --restart=Never -n flipkart-dev -- \
             sh -c "
               echo '--- Health Check ---'
@@ -286,6 +377,17 @@ jobs:
               echo ''
               echo '✅ All smoke tests passed!'
             "
+
+      - name: Terraform Destroy on Failure (cleanup)
+        if: failure()
+        working-directory: ${{ env.TF_WORKING_DIR }}
+        run: |
+          echo "⚠️ Deploy failed — cleaning up dev infrastructure..."
+          terraform destroy \
+            -var="resource_group_name=flipkartapp-dev-rg" \
+            -var="sql_admin_login=${{ secrets.SQL_ADMIN_LOGIN }}" \
+            -var="sql_admin_password=${{ secrets.SQL_ADMIN_PASSWORD }}" \
+            -auto-approve || true
 
   # ============================================================
   # STAGE 5: DEPLOY STAGING
