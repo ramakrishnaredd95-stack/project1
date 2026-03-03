@@ -7,13 +7,7 @@ terraform {
       version = "~> 3.80"
     }
   }
-
-  backend "azurerm" {
-    resource_group_name  = "flipkart-tfstate-rg"
-    storage_account_name = "flipkarttfstate"
-    container_name       = "tfstate"
-    key                  = "flipkartapp.terraform.tfstate"
-  }
+  
 }
 
 provider "azurerm" {
