@@ -1,0 +1,3158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<coverage line-rate="0.5682" branch-rate="0.6184000000000001" version="1.9" timestamp="1772557136" lines-covered="404" lines-valid="711" branches-covered="47" branches-valid="76">
+  <sources>
+    <source>C:\Users\91807\OneDrive\Desktop\MarchRun\Interview_Preparation\ProjectWork\FlipkartProject\src\</source>
+  </sources>
+  <packages>
+    <package name="FlipkartApp.API" line-rate="0.8814" branch-rate="0.6911" complexity="106">
+      <classes>
+        <class name="Program" filename="FlipkartApp.API\Program.cs" line-rate="0" branch-rate="0" complexity="4">
+          <methods>
+            <method name="&lt;Main&gt;$" signature="(System.String[])" line-rate="0" branch-rate="0" complexity="4">
+              <lines>
+                <line number="7" hits="0" branch="False" />
+                <line number="10" hits="0" branch="False" />
+                <line number="11" hits="0" branch="False" />
+                <line number="12" hits="0" branch="False" />
+                <line number="13" hits="0" branch="False" />
+                <line number="14" hits="0" branch="False" />
+                <line number="15" hits="0" branch="False" />
+                <line number="18" hits="0" branch="False" />
+                <line number="19" hits="0" branch="False" />
+                <line number="22" hits="0" branch="False" />
+                <line number="23" hits="0" branch="False" />
+                <line number="24" hits="0" branch="False" />
+                <line number="25" hits="0" branch="False" />
+                <line number="28" hits="0" branch="False" />
+                <line number="29" hits="0" branch="False" />
+                <line number="30" hits="0" branch="False" />
+                <line number="31" hits="0" branch="False" />
+                <line number="34" hits="0" branch="False" />
+                <line number="35" hits="0" branch="False" />
+                <line number="36" hits="0" branch="False" />
+                <line number="37" hits="0" branch="False" />
+                <line number="38" hits="0" branch="False" />
+                <line number="39" hits="0" branch="False" />
+                <line number="40" hits="0" branch="False" />
+                <line number="43" hits="0" branch="False" />
+                <line number="44" hits="0" branch="False" />
+                <line number="46" hits="0" branch="False" />
+                <line number="49" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="372" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="51" hits="0" branch="False" />
+                <line number="52" hits="0" branch="False" />
+                <line number="55" hits="0" branch="False" />
+                <line number="56" hits="0" branch="False" />
+                <line number="57" hits="0" branch="False" />
+                <line number="58" hits="0" branch="False" />
+                <line number="61" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="469" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="63" hits="0" branch="False" />
+                <line number="64" hits="0" branch="False" />
+                <line number="65" hits="0" branch="False" />
+                <line number="68" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="7" hits="0" branch="False" />
+            <line number="10" hits="0" branch="False" />
+            <line number="11" hits="0" branch="False" />
+            <line number="12" hits="0" branch="False" />
+            <line number="13" hits="0" branch="False" />
+            <line number="14" hits="0" branch="False" />
+            <line number="15" hits="0" branch="False" />
+            <line number="18" hits="0" branch="False" />
+            <line number="19" hits="0" branch="False" />
+            <line number="22" hits="0" branch="False" />
+            <line number="23" hits="0" branch="False" />
+            <line number="24" hits="0" branch="False" />
+            <line number="25" hits="0" branch="False" />
+            <line number="28" hits="0" branch="False" />
+            <line number="29" hits="0" branch="False" />
+            <line number="30" hits="0" branch="False" />
+            <line number="31" hits="0" branch="False" />
+            <line number="34" hits="0" branch="False" />
+            <line number="35" hits="0" branch="False" />
+            <line number="36" hits="0" branch="False" />
+            <line number="37" hits="0" branch="False" />
+            <line number="38" hits="0" branch="False" />
+            <line number="39" hits="0" branch="False" />
+            <line number="40" hits="0" branch="False" />
+            <line number="43" hits="0" branch="False" />
+            <line number="44" hits="0" branch="False" />
+            <line number="46" hits="0" branch="False" />
+            <line number="49" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="372" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="51" hits="0" branch="False" />
+            <line number="52" hits="0" branch="False" />
+            <line number="55" hits="0" branch="False" />
+            <line number="56" hits="0" branch="False" />
+            <line number="57" hits="0" branch="False" />
+            <line number="58" hits="0" branch="False" />
+            <line number="61" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="469" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="63" hits="0" branch="False" />
+            <line number="64" hits="0" branch="False" />
+            <line number="65" hits="0" branch="False" />
+            <line number="68" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.API.Services.CartService" filename="FlipkartApp.API\Services\CartService.cs" line-rate="1" branch-rate="0.41659999999999997" complexity="13">
+          <methods>
+            <method name="MapToDto" signature="(FlipkartApp.Core.Entities.CartItem)" line-rate="1" branch-rate="0.41659999999999997" complexity="12">
+              <lines>
+                <line number="75" hits="4" branch="True" condition-coverage="41.66% (5/12)">
+                  <conditions>
+                    <condition number="37" type="jump" coverage="50%" />
+                    <condition number="49" type="jump" coverage="50%" />
+                    <condition number="70" type="jump" coverage="50%" />
+                    <condition number="82" type="jump" coverage="50%" />
+                    <condition number="103" type="jump" coverage="50%" />
+                    <condition number="113" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="76" hits="4" branch="False" />
+                <line number="77" hits="4" branch="False" />
+                <line number="78" hits="4" branch="False" />
+                <line number="79" hits="4" branch="False" />
+                <line number="80" hits="4" branch="False" />
+                <line number="81" hits="4" branch="False" />
+                <line number="82" hits="4" branch="False" />
+                <line number="83" hits="4" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(FlipkartApp.Core.Interfaces.ICartRepository,FlipkartApp.Core.Interfaces.IProductRepository)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="22" hits="7" branch="False" />
+                <line number="24" hits="7" branch="False" />
+                <line number="25" hits="7" branch="False" />
+                <line number="26" hits="7" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="75" hits="4" branch="True" condition-coverage="41.66% (5/12)">
+              <conditions>
+                <condition number="37" type="jump" coverage="50%" />
+                <condition number="49" type="jump" coverage="50%" />
+                <condition number="70" type="jump" coverage="50%" />
+                <condition number="82" type="jump" coverage="50%" />
+                <condition number="103" type="jump" coverage="50%" />
+                <condition number="113" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="76" hits="4" branch="False" />
+            <line number="77" hits="4" branch="False" />
+            <line number="78" hits="4" branch="False" />
+            <line number="79" hits="4" branch="False" />
+            <line number="80" hits="4" branch="False" />
+            <line number="81" hits="4" branch="False" />
+            <line number="82" hits="4" branch="False" />
+            <line number="83" hits="4" branch="False" />
+            <line number="22" hits="7" branch="False" />
+            <line number="24" hits="7" branch="False" />
+            <line number="25" hits="7" branch="False" />
+            <line number="26" hits="7" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.API.Services.CartService/&lt;AddToCartAsync&gt;d__4" filename="FlipkartApp.API\Services\CartService.cs" line-rate="1" branch-rate="1" complexity="2">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="36" hits="2" branch="False" />
+                <line number="37" hits="2" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="148" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="38" hits="1" branch="False" />
+                <line number="40" hits="1" branch="False" />
+                <line number="41" hits="1" branch="False" />
+                <line number="42" hits="1" branch="False" />
+                <line number="43" hits="1" branch="False" />
+                <line number="44" hits="1" branch="False" />
+                <line number="45" hits="1" branch="False" />
+                <line number="47" hits="1" branch="False" />
+                <line number="49" hits="1" branch="False" />
+                <line number="50" hits="1" branch="False" />
+                <line number="51" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="36" hits="2" branch="False" />
+            <line number="37" hits="2" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="148" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="38" hits="1" branch="False" />
+            <line number="40" hits="1" branch="False" />
+            <line number="41" hits="1" branch="False" />
+            <line number="42" hits="1" branch="False" />
+            <line number="43" hits="1" branch="False" />
+            <line number="44" hits="1" branch="False" />
+            <line number="45" hits="1" branch="False" />
+            <line number="47" hits="1" branch="False" />
+            <line number="49" hits="1" branch="False" />
+            <line number="50" hits="1" branch="False" />
+            <line number="51" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.API.Services.CartService/&lt;ClearCartAsync&gt;d__7" filename="FlipkartApp.API\Services\CartService.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="70" hits="1" branch="False" />
+                <line number="71" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="70" hits="1" branch="False" />
+            <line number="71" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.API.Services.CartService/&lt;GetCartAsync&gt;d__3" filename="FlipkartApp.API\Services\CartService.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="30" hits="1" branch="False" />
+                <line number="31" hits="1" branch="False" />
+                <line number="32" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="30" hits="1" branch="False" />
+            <line number="31" hits="1" branch="False" />
+            <line number="32" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.API.Services.CartService/&lt;RemoveFromCartAsync&gt;d__6" filename="FlipkartApp.API\Services\CartService.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="65" hits="1" branch="False" />
+                <line number="66" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="65" hits="1" branch="False" />
+            <line number="66" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.API.Services.CartService/&lt;UpdateCartItemAsync&gt;d__5" filename="FlipkartApp.API\Services\CartService.cs" line-rate="1" branch-rate="1" complexity="2">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="55" hits="2" branch="False" />
+                <line number="56" hits="3" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="135" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="58" hits="1" branch="False" />
+                <line number="59" hits="1" branch="False" />
+                <line number="60" hits="1" branch="False" />
+                <line number="61" hits="2" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="55" hits="2" branch="False" />
+            <line number="56" hits="3" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="135" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="58" hits="1" branch="False" />
+            <line number="59" hits="1" branch="False" />
+            <line number="60" hits="1" branch="False" />
+            <line number="61" hits="2" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.API.Services.CategoryService" filename="FlipkartApp.API\Services\CategoryService.cs" line-rate="1" branch-rate="0.5" complexity="3">
+          <methods>
+            <method name="MapToDto" signature="(FlipkartApp.Core.Entities.Category)" line-rate="1" branch-rate="0.5" complexity="2">
+              <lines>
+                <line number="44" hits="7" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="73" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="45" hits="7" branch="False" />
+                <line number="46" hits="7" branch="False" />
+                <line number="47" hits="7" branch="False" />
+                <line number="48" hits="7" branch="False" />
+                <line number="49" hits="7" branch="False" />
+                <line number="50" hits="7" branch="False" />
+                <line number="51" hits="7" branch="False" />
+                <line number="52" hits="7" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(FlipkartApp.Core.Interfaces.ICategoryRepository)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="19" hits="6" branch="False" />
+                <line number="21" hits="6" branch="False" />
+                <line number="22" hits="6" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="44" hits="7" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="73" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="45" hits="7" branch="False" />
+            <line number="46" hits="7" branch="False" />
+            <line number="47" hits="7" branch="False" />
+            <line number="48" hits="7" branch="False" />
+            <line number="49" hits="7" branch="False" />
+            <line number="50" hits="7" branch="False" />
+            <line number="51" hits="7" branch="False" />
+            <line number="52" hits="7" branch="False" />
+            <line number="19" hits="6" branch="False" />
+            <line number="21" hits="6" branch="False" />
+            <line number="22" hits="6" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.API.Services.CategoryService/&lt;GetAllCategoriesAsync&gt;d__2" filename="FlipkartApp.API\Services\CategoryService.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="26" hits="2" branch="False" />
+                <line number="27" hits="2" branch="False" />
+                <line number="28" hits="2" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="26" hits="2" branch="False" />
+            <line number="27" hits="2" branch="False" />
+            <line number="28" hits="2" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.API.Services.CategoryService/&lt;GetCategoriesByTypeAsync&gt;d__4" filename="FlipkartApp.API\Services\CategoryService.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="38" hits="2" branch="False" />
+                <line number="39" hits="2" branch="False" />
+                <line number="40" hits="2" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="38" hits="2" branch="False" />
+            <line number="39" hits="2" branch="False" />
+            <line number="40" hits="2" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.API.Services.CategoryService/&lt;GetCategoryByIdAsync&gt;d__3" filename="FlipkartApp.API\Services\CategoryService.cs" line-rate="1" branch-rate="1" complexity="2">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="32" hits="2" branch="False" />
+                <line number="33" hits="2" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="125" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="34" hits="2" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="32" hits="2" branch="False" />
+            <line number="33" hits="2" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="125" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="34" hits="2" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.API.Services.OrderService" filename="FlipkartApp.API\Services\OrderService.cs" line-rate="1" branch-rate="0.5" complexity="5">
+          <methods>
+            <method name="MapToDto" signature="(FlipkartApp.Core.Entities.Order)" line-rate="1" branch-rate="0.5" complexity="4">
+              <lines>
+                <line number="87" hits="4" branch="True" condition-coverage="50% (2/4)">
+                  <conditions>
+                    <condition number="97" type="jump" coverage="50%" />
+                    <condition number="145" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="88" hits="4" branch="False" />
+                <line number="89" hits="4" branch="False" />
+                <line number="90" hits="4" branch="False" />
+                <line number="91" hits="4" branch="False" />
+                <line number="92" hits="4" branch="False" />
+                <line number="93" hits="4" branch="False" />
+                <line number="94" hits="4" branch="False" />
+                <line number="95" hits="4" branch="False" />
+                <line number="96" hits="1" branch="False" />
+                <line number="97" hits="1" branch="False" />
+                <line number="98" hits="1" branch="False" />
+                <line number="99" hits="1" branch="False" />
+                <line number="100" hits="1" branch="False" />
+                <line number="101" hits="1" branch="False" />
+                <line number="102" hits="1" branch="False" />
+                <line number="103" hits="1" branch="False" />
+                <line number="104" hits="4" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(FlipkartApp.Core.Interfaces.IOrderRepository,FlipkartApp.Core.Interfaces.ICartRepository,FlipkartApp.Core.Interfaces.IProductRepository)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="22" hits="7" branch="False" />
+                <line number="24" hits="7" branch="False" />
+                <line number="25" hits="7" branch="False" />
+                <line number="26" hits="7" branch="False" />
+                <line number="27" hits="7" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="87" hits="4" branch="True" condition-coverage="50% (2/4)">
+              <conditions>
+                <condition number="97" type="jump" coverage="50%" />
+                <condition number="145" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="88" hits="4" branch="False" />
+            <line number="89" hits="4" branch="False" />
+            <line number="90" hits="4" branch="False" />
+            <line number="91" hits="4" branch="False" />
+            <line number="92" hits="4" branch="False" />
+            <line number="93" hits="4" branch="False" />
+            <line number="94" hits="4" branch="False" />
+            <line number="95" hits="4" branch="False" />
+            <line number="96" hits="1" branch="False" />
+            <line number="97" hits="1" branch="False" />
+            <line number="98" hits="1" branch="False" />
+            <line number="99" hits="1" branch="False" />
+            <line number="100" hits="1" branch="False" />
+            <line number="101" hits="1" branch="False" />
+            <line number="102" hits="1" branch="False" />
+            <line number="103" hits="1" branch="False" />
+            <line number="104" hits="4" branch="False" />
+            <line number="22" hits="7" branch="False" />
+            <line number="24" hits="7" branch="False" />
+            <line number="25" hits="7" branch="False" />
+            <line number="26" hits="7" branch="False" />
+            <line number="27" hits="7" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.API.Services.OrderService/&lt;&gt;c" filename="FlipkartApp.API\Services\OrderService.cs" line-rate="1" branch-rate="0.375" complexity="9">
+          <methods>
+            <method name="&lt;CreateOrderAsync&gt;b__6_1" signature="(FlipkartApp.Core.Entities.CartItem)" line-rate="1" branch-rate="0.375" complexity="8">
+              <lines>
+                <line number="56" hits="1" branch="True" condition-coverage="37.5% (3/8)">
+                  <conditions>
+                    <condition number="25" type="jump" coverage="50%" />
+                    <condition number="37" type="jump" coverage="50%" />
+                    <condition number="58" type="jump" coverage="50%" />
+                    <condition number="68" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="57" hits="1" branch="False" />
+                <line number="58" hits="1" branch="False" />
+                <line number="59" hits="1" branch="False" />
+                <line number="60" hits="1" branch="False" />
+                <line number="61" hits="1" branch="False" />
+                <line number="62" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name="&lt;CreateOrderAsync&gt;b__6_0" signature="(FlipkartApp.Core.Entities.OrderItem)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="65" hits="2" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="56" hits="1" branch="True" condition-coverage="37.5% (3/8)">
+              <conditions>
+                <condition number="25" type="jump" coverage="50%" />
+                <condition number="37" type="jump" coverage="50%" />
+                <condition number="58" type="jump" coverage="50%" />
+                <condition number="68" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="57" hits="1" branch="False" />
+            <line number="58" hits="1" branch="False" />
+            <line number="59" hits="1" branch="False" />
+            <line number="60" hits="1" branch="False" />
+            <line number="61" hits="1" branch="False" />
+            <line number="62" hits="1" branch="False" />
+            <line number="65" hits="2" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.API.Services.OrderService/&lt;CreateOrderAsync&gt;d__6" filename="FlipkartApp.API\Services\OrderService.cs" line-rate="1" branch-rate="1" complexity="2">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="43" hits="2" branch="False" />
+                <line number="44" hits="2" branch="False" />
+                <line number="46" hits="2" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="162" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="47" hits="1" branch="False" />
+                <line number="49" hits="1" branch="False" />
+                <line number="50" hits="1" branch="False" />
+                <line number="51" hits="1" branch="False" />
+                <line number="52" hits="1" branch="False" />
+                <line number="53" hits="1" branch="False" />
+                <line number="54" hits="1" branch="False" />
+                <line number="55" hits="1" branch="False" />
+                <line number="63" hits="1" branch="False" />
+                <line number="67" hits="1" branch="False" />
+                <line number="70" hits="1" branch="False" />
+                <line number="72" hits="1" branch="False" />
+                <line number="73" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="43" hits="2" branch="False" />
+            <line number="44" hits="2" branch="False" />
+            <line number="46" hits="2" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="162" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="47" hits="1" branch="False" />
+            <line number="49" hits="1" branch="False" />
+            <line number="50" hits="1" branch="False" />
+            <line number="51" hits="1" branch="False" />
+            <line number="52" hits="1" branch="False" />
+            <line number="53" hits="1" branch="False" />
+            <line number="54" hits="1" branch="False" />
+            <line number="55" hits="1" branch="False" />
+            <line number="63" hits="1" branch="False" />
+            <line number="67" hits="1" branch="False" />
+            <line number="70" hits="1" branch="False" />
+            <line number="72" hits="1" branch="False" />
+            <line number="73" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.API.Services.OrderService/&lt;GetAllOrdersAsync&gt;d__4" filename="FlipkartApp.API\Services\OrderService.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="31" hits="1" branch="False" />
+                <line number="32" hits="1" branch="False" />
+                <line number="33" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="31" hits="1" branch="False" />
+            <line number="32" hits="1" branch="False" />
+            <line number="33" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.API.Services.OrderService/&lt;GetOrderByIdAsync&gt;d__5" filename="FlipkartApp.API\Services\OrderService.cs" line-rate="1" branch-rate="1" complexity="2">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="37" hits="2" branch="False" />
+                <line number="38" hits="2" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="125" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="39" hits="2" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="37" hits="2" branch="False" />
+            <line number="38" hits="2" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="125" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="39" hits="2" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.API.Services.OrderService/&lt;UpdateOrderStatusAsync&gt;d__7" filename="FlipkartApp.API\Services\OrderService.cs" line-rate="1" branch-rate="1" complexity="2">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="77" hits="2" branch="False" />
+                <line number="78" hits="3" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="135" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="80" hits="1" branch="False" />
+                <line number="81" hits="1" branch="False" />
+                <line number="82" hits="1" branch="False" />
+                <line number="83" hits="2" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="77" hits="2" branch="False" />
+            <line number="78" hits="3" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="135" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="80" hits="1" branch="False" />
+            <line number="81" hits="1" branch="False" />
+            <line number="82" hits="1" branch="False" />
+            <line number="83" hits="2" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.API.Services.ProductService" filename="FlipkartApp.API\Services\ProductService.cs" line-rate="1" branch-rate="0.5" complexity="5">
+          <methods>
+            <method name="MapToDto" signature="(FlipkartApp.Core.Entities.Product)" line-rate="1" branch-rate="0.5" complexity="4">
+              <lines>
+                <line number="113" hits="10" branch="True" condition-coverage="50% (2/4)">
+                  <conditions>
+                    <condition number="145" type="jump" coverage="50%" />
+                    <condition number="157" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="114" hits="10" branch="False" />
+                <line number="115" hits="10" branch="False" />
+                <line number="116" hits="10" branch="False" />
+                <line number="117" hits="10" branch="False" />
+                <line number="118" hits="10" branch="False" />
+                <line number="119" hits="10" branch="False" />
+                <line number="120" hits="10" branch="False" />
+                <line number="121" hits="10" branch="False" />
+                <line number="122" hits="10" branch="False" />
+                <line number="123" hits="10" branch="False" />
+                <line number="124" hits="10" branch="False" />
+                <line number="125" hits="10" branch="False" />
+                <line number="126" hits="10" branch="False" />
+                <line number="127" hits="10" branch="False" />
+                <line number="128" hits="10" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(FlipkartApp.Core.Interfaces.IProductRepository)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="25" hits="12" branch="False" />
+                <line number="27" hits="12" branch="False" />
+                <line number="28" hits="12" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="113" hits="10" branch="True" condition-coverage="50% (2/4)">
+              <conditions>
+                <condition number="145" type="jump" coverage="50%" />
+                <condition number="157" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="114" hits="10" branch="False" />
+            <line number="115" hits="10" branch="False" />
+            <line number="116" hits="10" branch="False" />
+            <line number="117" hits="10" branch="False" />
+            <line number="118" hits="10" branch="False" />
+            <line number="119" hits="10" branch="False" />
+            <line number="120" hits="10" branch="False" />
+            <line number="121" hits="10" branch="False" />
+            <line number="122" hits="10" branch="False" />
+            <line number="123" hits="10" branch="False" />
+            <line number="124" hits="10" branch="False" />
+            <line number="125" hits="10" branch="False" />
+            <line number="126" hits="10" branch="False" />
+            <line number="127" hits="10" branch="False" />
+            <line number="128" hits="10" branch="False" />
+            <line number="25" hits="12" branch="False" />
+            <line number="27" hits="12" branch="False" />
+            <line number="28" hits="12" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.API.Services.ProductService/&lt;CreateProductAsync&gt;d__8" filename="FlipkartApp.API\Services\ProductService.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="68" hits="1" branch="False" />
+                <line number="69" hits="1" branch="False" />
+                <line number="70" hits="1" branch="False" />
+                <line number="71" hits="1" branch="False" />
+                <line number="72" hits="1" branch="False" />
+                <line number="73" hits="1" branch="False" />
+                <line number="74" hits="1" branch="False" />
+                <line number="75" hits="1" branch="False" />
+                <line number="76" hits="1" branch="False" />
+                <line number="77" hits="1" branch="False" />
+                <line number="78" hits="1" branch="False" />
+                <line number="79" hits="1" branch="False" />
+                <line number="80" hits="1" branch="False" />
+                <line number="81" hits="1" branch="False" />
+                <line number="83" hits="1" branch="False" />
+                <line number="84" hits="1" branch="False" />
+                <line number="85" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="68" hits="1" branch="False" />
+            <line number="69" hits="1" branch="False" />
+            <line number="70" hits="1" branch="False" />
+            <line number="71" hits="1" branch="False" />
+            <line number="72" hits="1" branch="False" />
+            <line number="73" hits="1" branch="False" />
+            <line number="74" hits="1" branch="False" />
+            <line number="75" hits="1" branch="False" />
+            <line number="76" hits="1" branch="False" />
+            <line number="77" hits="1" branch="False" />
+            <line number="78" hits="1" branch="False" />
+            <line number="79" hits="1" branch="False" />
+            <line number="80" hits="1" branch="False" />
+            <line number="81" hits="1" branch="False" />
+            <line number="83" hits="1" branch="False" />
+            <line number="84" hits="1" branch="False" />
+            <line number="85" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.API.Services.ProductService/&lt;DeleteProductAsync&gt;d__10" filename="FlipkartApp.API\Services\ProductService.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="108" hits="2" branch="False" />
+                <line number="109" hits="2" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="108" hits="2" branch="False" />
+            <line number="109" hits="2" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.API.Services.ProductService/&lt;GetAllProductsAsync&gt;d__2" filename="FlipkartApp.API\Services\ProductService.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="32" hits="1" branch="False" />
+                <line number="33" hits="1" branch="False" />
+                <line number="34" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="32" hits="1" branch="False" />
+            <line number="33" hits="1" branch="False" />
+            <line number="34" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.API.Services.ProductService/&lt;GetGroceryProductsAsync&gt;d__5" filename="FlipkartApp.API\Services\ProductService.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="50" hits="1" branch="False" />
+                <line number="51" hits="1" branch="False" />
+                <line number="52" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="50" hits="1" branch="False" />
+            <line number="51" hits="1" branch="False" />
+            <line number="52" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.API.Services.ProductService/&lt;GetMobileProductsAsync&gt;d__4" filename="FlipkartApp.API\Services\ProductService.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="44" hits="1" branch="False" />
+                <line number="45" hits="1" branch="False" />
+                <line number="46" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="44" hits="1" branch="False" />
+            <line number="45" hits="1" branch="False" />
+            <line number="46" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.API.Services.ProductService/&lt;GetProductByIdAsync&gt;d__3" filename="FlipkartApp.API\Services\ProductService.cs" line-rate="1" branch-rate="1" complexity="2">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="38" hits="2" branch="False" />
+                <line number="39" hits="2" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="125" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="40" hits="2" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="38" hits="2" branch="False" />
+            <line number="39" hits="2" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="125" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="40" hits="2" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.API.Services.ProductService/&lt;GetProductsByCategoryAsync&gt;d__6" filename="FlipkartApp.API\Services\ProductService.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="56" hits="1" branch="False" />
+                <line number="57" hits="1" branch="False" />
+                <line number="58" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="56" hits="1" branch="False" />
+            <line number="57" hits="1" branch="False" />
+            <line number="58" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.API.Services.ProductService/&lt;SearchProductsAsync&gt;d__7" filename="FlipkartApp.API\Services\ProductService.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="62" hits="1" branch="False" />
+                <line number="63" hits="1" branch="False" />
+                <line number="64" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="62" hits="1" branch="False" />
+            <line number="63" hits="1" branch="False" />
+            <line number="64" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.API.Services.ProductService/&lt;UpdateProductAsync&gt;d__9" filename="FlipkartApp.API\Services\ProductService.cs" line-rate="1" branch-rate="1" complexity="2">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="89" hits="2" branch="False" />
+                <line number="90" hits="3" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="135" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="92" hits="1" branch="False" />
+                <line number="93" hits="1" branch="False" />
+                <line number="94" hits="1" branch="False" />
+                <line number="95" hits="1" branch="False" />
+                <line number="96" hits="1" branch="False" />
+                <line number="97" hits="1" branch="False" />
+                <line number="98" hits="1" branch="False" />
+                <line number="99" hits="1" branch="False" />
+                <line number="100" hits="1" branch="False" />
+                <line number="102" hits="1" branch="False" />
+                <line number="103" hits="1" branch="False" />
+                <line number="104" hits="2" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="89" hits="2" branch="False" />
+            <line number="90" hits="3" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="135" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="92" hits="1" branch="False" />
+            <line number="93" hits="1" branch="False" />
+            <line number="94" hits="1" branch="False" />
+            <line number="95" hits="1" branch="False" />
+            <line number="96" hits="1" branch="False" />
+            <line number="97" hits="1" branch="False" />
+            <line number="98" hits="1" branch="False" />
+            <line number="99" hits="1" branch="False" />
+            <line number="100" hits="1" branch="False" />
+            <line number="102" hits="1" branch="False" />
+            <line number="103" hits="1" branch="False" />
+            <line number="104" hits="2" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.API.Controllers.CartController" filename="FlipkartApp.API\Controllers\CartController.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name=".ctor" signature="(FlipkartApp.API.Services.ICartService)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="13" hits="8" branch="False" />
+                <line number="15" hits="8" branch="False" />
+                <line number="16" hits="8" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="13" hits="8" branch="False" />
+            <line number="15" hits="8" branch="False" />
+            <line number="16" hits="8" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.API.Controllers.CartController/&lt;AddToCart&gt;d__3" filename="FlipkartApp.API\Controllers\CartController.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="30" hits="2" branch="False" />
+                <line number="31" hits="1" branch="False" />
+                <line number="33" hits="1" branch="False" />
+                <line number="35" hits="1" branch="False" />
+                <line number="37" hits="2" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="30" hits="2" branch="False" />
+            <line number="31" hits="1" branch="False" />
+            <line number="33" hits="1" branch="False" />
+            <line number="35" hits="1" branch="False" />
+            <line number="37" hits="2" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.API.Controllers.CartController/&lt;ClearCart&gt;d__6" filename="FlipkartApp.API\Controllers\CartController.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="58" hits="1" branch="False" />
+                <line number="59" hits="1" branch="False" />
+                <line number="60" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="58" hits="1" branch="False" />
+            <line number="59" hits="1" branch="False" />
+            <line number="60" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.API.Controllers.CartController/&lt;GetCart&gt;d__2" filename="FlipkartApp.API\Controllers\CartController.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="21" hits="1" branch="False" />
+                <line number="22" hits="1" branch="False" />
+                <line number="23" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="21" hits="1" branch="False" />
+            <line number="22" hits="1" branch="False" />
+            <line number="23" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.API.Controllers.CartController/&lt;RemoveFromCart&gt;d__5" filename="FlipkartApp.API\Controllers\CartController.cs" line-rate="1" branch-rate="1" complexity="2">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="50" hits="2" branch="False" />
+                <line number="51" hits="3" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="125" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="52" hits="1" branch="False" />
+                <line number="53" hits="2" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="50" hits="2" branch="False" />
+            <line number="51" hits="3" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="125" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="52" hits="1" branch="False" />
+            <line number="53" hits="2" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.API.Controllers.CartController/&lt;UpdateCartItem&gt;d__4" filename="FlipkartApp.API\Controllers\CartController.cs" line-rate="1" branch-rate="1" complexity="2">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="42" hits="2" branch="False" />
+                <line number="43" hits="3" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="131" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="44" hits="1" branch="False" />
+                <line number="45" hits="2" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="42" hits="2" branch="False" />
+            <line number="43" hits="3" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="131" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="44" hits="1" branch="False" />
+            <line number="45" hits="2" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.API.Controllers.CategoriesController" filename="FlipkartApp.API\Controllers\CategoriesController.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name=".ctor" signature="(FlipkartApp.API.Services.ICategoryService)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="14" hits="5" branch="False" />
+                <line number="16" hits="5" branch="False" />
+                <line number="17" hits="5" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="14" hits="5" branch="False" />
+            <line number="16" hits="5" branch="False" />
+            <line number="17" hits="5" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.API.Controllers.CategoriesController/&lt;GetAll&gt;d__2" filename="FlipkartApp.API\Controllers\CategoriesController.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="22" hits="1" branch="False" />
+                <line number="23" hits="1" branch="False" />
+                <line number="24" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="22" hits="1" branch="False" />
+            <line number="23" hits="1" branch="False" />
+            <line number="24" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.API.Controllers.CategoriesController/&lt;GetById&gt;d__3" filename="FlipkartApp.API\Controllers\CategoriesController.cs" line-rate="1" branch-rate="1" complexity="2">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="29" hits="2" branch="False" />
+                <line number="30" hits="3" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="125" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="31" hits="1" branch="False" />
+                <line number="32" hits="2" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="29" hits="2" branch="False" />
+            <line number="30" hits="3" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="125" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="31" hits="1" branch="False" />
+            <line number="32" hits="2" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.API.Controllers.CategoriesController/&lt;GetGroceryCategories&gt;d__5" filename="FlipkartApp.API\Controllers\CategoriesController.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="44" hits="1" branch="False" />
+                <line number="45" hits="1" branch="False" />
+                <line number="46" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="44" hits="1" branch="False" />
+            <line number="45" hits="1" branch="False" />
+            <line number="46" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.API.Controllers.CategoriesController/&lt;GetMobileCategories&gt;d__4" filename="FlipkartApp.API\Controllers\CategoriesController.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="37" hits="1" branch="False" />
+                <line number="38" hits="1" branch="False" />
+                <line number="39" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="37" hits="1" branch="False" />
+            <line number="38" hits="1" branch="False" />
+            <line number="39" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.API.Controllers.HealthController" filename="FlipkartApp.API\Controllers\HealthController.cs" line-rate="1" branch-rate="1" complexity="3">
+          <methods>
+            <method name="Get" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="12" hits="1" branch="False" />
+                <line number="13" hits="1" branch="False" />
+                <line number="14" hits="1" branch="False" />
+                <line number="15" hits="1" branch="False" />
+                <line number="16" hits="1" branch="False" />
+                <line number="17" hits="1" branch="False" />
+                <line number="18" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name="Ready" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="24" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name="Live" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="30" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="12" hits="1" branch="False" />
+            <line number="13" hits="1" branch="False" />
+            <line number="14" hits="1" branch="False" />
+            <line number="15" hits="1" branch="False" />
+            <line number="16" hits="1" branch="False" />
+            <line number="17" hits="1" branch="False" />
+            <line number="18" hits="1" branch="False" />
+            <line number="24" hits="1" branch="False" />
+            <line number="30" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.API.Controllers.OrdersController" filename="FlipkartApp.API\Controllers\OrdersController.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name=".ctor" signature="(FlipkartApp.API.Services.IOrderService)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="14" hits="7" branch="False" />
+                <line number="16" hits="7" branch="False" />
+                <line number="17" hits="7" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="14" hits="7" branch="False" />
+            <line number="16" hits="7" branch="False" />
+            <line number="17" hits="7" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.API.Controllers.OrdersController/&lt;Create&gt;d__4" filename="FlipkartApp.API\Controllers\OrdersController.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="39" hits="2" branch="False" />
+                <line number="40" hits="1" branch="False" />
+                <line number="42" hits="1" branch="False" />
+                <line number="44" hits="1" branch="False" />
+                <line number="46" hits="2" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="39" hits="2" branch="False" />
+            <line number="40" hits="1" branch="False" />
+            <line number="42" hits="1" branch="False" />
+            <line number="44" hits="1" branch="False" />
+            <line number="46" hits="2" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.API.Controllers.OrdersController/&lt;GetAll&gt;d__2" filename="FlipkartApp.API\Controllers\OrdersController.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="22" hits="1" branch="False" />
+                <line number="23" hits="1" branch="False" />
+                <line number="24" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="22" hits="1" branch="False" />
+            <line number="23" hits="1" branch="False" />
+            <line number="24" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.API.Controllers.OrdersController/&lt;GetById&gt;d__3" filename="FlipkartApp.API\Controllers\OrdersController.cs" line-rate="1" branch-rate="1" complexity="2">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="29" hits="2" branch="False" />
+                <line number="30" hits="3" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="125" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="31" hits="1" branch="False" />
+                <line number="32" hits="2" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="29" hits="2" branch="False" />
+            <line number="30" hits="3" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="125" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="31" hits="1" branch="False" />
+            <line number="32" hits="2" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.API.Controllers.OrdersController/&lt;UpdateStatus&gt;d__5" filename="FlipkartApp.API\Controllers\OrdersController.cs" line-rate="1" branch-rate="1" complexity="2">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="51" hits="2" branch="False" />
+                <line number="52" hits="3" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="131" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="53" hits="1" branch="False" />
+                <line number="54" hits="2" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="51" hits="2" branch="False" />
+            <line number="52" hits="3" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="131" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="53" hits="1" branch="False" />
+            <line number="54" hits="2" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.API.Controllers.ProductsController" filename="FlipkartApp.API\Controllers\ProductsController.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name=".ctor" signature="(FlipkartApp.API.Services.IProductService)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="13" hits="13" branch="False" />
+                <line number="15" hits="13" branch="False" />
+                <line number="16" hits="13" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="13" hits="13" branch="False" />
+            <line number="15" hits="13" branch="False" />
+            <line number="16" hits="13" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.API.Controllers.ProductsController/&lt;Create&gt;d__8" filename="FlipkartApp.API\Controllers\ProductsController.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="67" hits="1" branch="False" />
+                <line number="68" hits="1" branch="False" />
+                <line number="69" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="67" hits="1" branch="False" />
+            <line number="68" hits="1" branch="False" />
+            <line number="69" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.API.Controllers.ProductsController/&lt;Delete&gt;d__10" filename="FlipkartApp.API\Controllers\ProductsController.cs" line-rate="1" branch-rate="1" complexity="2">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="82" hits="2" branch="False" />
+                <line number="83" hits="3" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="125" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="84" hits="1" branch="False" />
+                <line number="85" hits="2" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="82" hits="2" branch="False" />
+            <line number="83" hits="3" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="125" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="84" hits="1" branch="False" />
+            <line number="85" hits="2" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.API.Controllers.ProductsController/&lt;GetAll&gt;d__2" filename="FlipkartApp.API\Controllers\ProductsController.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="21" hits="1" branch="False" />
+                <line number="22" hits="1" branch="False" />
+                <line number="23" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="21" hits="1" branch="False" />
+            <line number="22" hits="1" branch="False" />
+            <line number="23" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.API.Controllers.ProductsController/&lt;GetByCategory&gt;d__6" filename="FlipkartApp.API\Controllers\ProductsController.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="50" hits="1" branch="False" />
+                <line number="51" hits="1" branch="False" />
+                <line number="52" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="50" hits="1" branch="False" />
+            <line number="51" hits="1" branch="False" />
+            <line number="52" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.API.Controllers.ProductsController/&lt;GetById&gt;d__3" filename="FlipkartApp.API\Controllers\ProductsController.cs" line-rate="1" branch-rate="1" complexity="2">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="28" hits="2" branch="False" />
+                <line number="29" hits="3" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="125" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="30" hits="1" branch="False" />
+                <line number="31" hits="2" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="28" hits="2" branch="False" />
+            <line number="29" hits="3" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="125" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="30" hits="1" branch="False" />
+            <line number="31" hits="2" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.API.Controllers.ProductsController/&lt;GetGrocery&gt;d__5" filename="FlipkartApp.API\Controllers\ProductsController.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="43" hits="1" branch="False" />
+                <line number="44" hits="1" branch="False" />
+                <line number="45" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="43" hits="1" branch="False" />
+            <line number="44" hits="1" branch="False" />
+            <line number="45" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.API.Controllers.ProductsController/&lt;GetMobile&gt;d__4" filename="FlipkartApp.API\Controllers\ProductsController.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="36" hits="1" branch="False" />
+                <line number="37" hits="1" branch="False" />
+                <line number="38" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="36" hits="1" branch="False" />
+            <line number="37" hits="1" branch="False" />
+            <line number="38" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.API.Controllers.ProductsController/&lt;Search&gt;d__7" filename="FlipkartApp.API\Controllers\ProductsController.cs" line-rate="1" branch-rate="1" complexity="2">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="57" hits="2" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="28" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="58" hits="1" branch="False" />
+                <line number="60" hits="1" branch="False" />
+                <line number="61" hits="1" branch="False" />
+                <line number="62" hits="2" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="57" hits="2" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="28" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="58" hits="1" branch="False" />
+            <line number="60" hits="1" branch="False" />
+            <line number="61" hits="1" branch="False" />
+            <line number="62" hits="2" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.API.Controllers.ProductsController/&lt;Update&gt;d__9" filename="FlipkartApp.API\Controllers\ProductsController.cs" line-rate="1" branch-rate="1" complexity="2">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="74" hits="2" branch="False" />
+                <line number="75" hits="3" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="131" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="76" hits="1" branch="False" />
+                <line number="77" hits="2" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="74" hits="2" branch="False" />
+            <line number="75" hits="3" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="131" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="76" hits="1" branch="False" />
+            <line number="77" hits="2" branch="False" />
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="FlipkartApp.Core" line-rate="0.95" branch-rate="1" complexity="120">
+      <classes>
+        <class name="FlipkartApp.Core.Entities.CartItem" filename="FlipkartApp.Core\Entities\CartItem.cs" line-rate="1" branch-rate="1" complexity="7">
+          <methods>
+            <method name="get_Id" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="5" hits="9" branch="False" />
+              </lines>
+            </method>
+            <method name="get_SessionId" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="6" hits="10" branch="False" />
+              </lines>
+            </method>
+            <method name="get_ProductId" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="10" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Quantity" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="11" branch="False" />
+              </lines>
+            </method>
+            <method name="get_CreatedAt" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="5" branch="False" />
+              </lines>
+            </method>
+            <method name="get_UpdatedAt" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="5" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Product" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="13" hits="18" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="5" hits="9" branch="False" />
+            <line number="6" hits="10" branch="False" />
+            <line number="7" hits="10" branch="False" />
+            <line number="8" hits="11" branch="False" />
+            <line number="9" hits="5" branch="False" />
+            <line number="10" hits="5" branch="False" />
+            <line number="13" hits="18" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.Core.Entities.Category" filename="FlipkartApp.Core\Entities\Category.cs" line-rate="1" branch-rate="1" complexity="8">
+          <methods>
+            <method name="get_Id" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="23" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Name" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="49" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Description" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="23" branch="False" />
+              </lines>
+            </method>
+            <method name="get_ImageUrl" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="23" branch="False" />
+              </lines>
+            </method>
+            <method name="get_ProductType" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="11" hits="22" branch="False" />
+              </lines>
+            </method>
+            <method name="get_CreatedAt" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="12" hits="16" branch="False" />
+              </lines>
+            </method>
+            <method name="get_UpdatedAt" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="13" hits="16" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Products" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="16" hits="29" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="7" hits="23" branch="False" />
+            <line number="8" hits="49" branch="False" />
+            <line number="9" hits="23" branch="False" />
+            <line number="10" hits="23" branch="False" />
+            <line number="11" hits="22" branch="False" />
+            <line number="12" hits="16" branch="False" />
+            <line number="13" hits="16" branch="False" />
+            <line number="16" hits="29" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.Core.Entities.Order" filename="FlipkartApp.Core\Entities\Order.cs" line-rate="1" branch-rate="1" complexity="10">
+          <methods>
+            <method name="get_Id" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="8" branch="False" />
+              </lines>
+            </method>
+            <method name="get_OrderNumber" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="12" branch="False" />
+              </lines>
+            </method>
+            <method name="get_CustomerName" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="11" branch="False" />
+              </lines>
+            </method>
+            <method name="get_CustomerEmail" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="9" branch="False" />
+              </lines>
+            </method>
+            <method name="get_ShippingAddress" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="11" hits="5" branch="False" />
+              </lines>
+            </method>
+            <method name="get_TotalAmount" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="12" hits="7" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Status" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="13" hits="11" branch="False" />
+              </lines>
+            </method>
+            <method name="get_OrderDate" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="14" hits="8" branch="False" />
+              </lines>
+            </method>
+            <method name="get_UpdatedAt" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="15" hits="4" branch="False" />
+              </lines>
+            </method>
+            <method name="get_OrderItems" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="18" hits="13" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="7" hits="8" branch="False" />
+            <line number="8" hits="12" branch="False" />
+            <line number="9" hits="11" branch="False" />
+            <line number="10" hits="9" branch="False" />
+            <line number="11" hits="5" branch="False" />
+            <line number="12" hits="7" branch="False" />
+            <line number="13" hits="11" branch="False" />
+            <line number="14" hits="8" branch="False" />
+            <line number="15" hits="4" branch="False" />
+            <line number="18" hits="13" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.Core.Entities.OrderItem" filename="FlipkartApp.Core\Entities\OrderItem.cs" line-rate="0.44439999999999996" branch-rate="1" complexity="9">
+          <methods>
+            <method name="get_Id" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="5" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_OrderId" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="6" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_ProductId" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="2" branch="False" />
+              </lines>
+            </method>
+            <method name="get_ProductName" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="3" branch="False" />
+              </lines>
+            </method>
+            <method name="get_UnitPrice" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="4" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Quantity" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="4" branch="False" />
+              </lines>
+            </method>
+            <method name="get_TotalPrice" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="11" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Order" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="14" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Product" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="15" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="5" hits="0" branch="False" />
+            <line number="6" hits="0" branch="False" />
+            <line number="7" hits="2" branch="False" />
+            <line number="8" hits="3" branch="False" />
+            <line number="9" hits="4" branch="False" />
+            <line number="10" hits="4" branch="False" />
+            <line number="11" hits="0" branch="False" />
+            <line number="14" hits="0" branch="False" />
+            <line number="15" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.Core.Entities.Product" filename="FlipkartApp.Core\Entities\Product.cs" line-rate="1" branch-rate="1" complexity="20">
+          <methods>
+            <method name="get_Id" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="24" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Name" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="48" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Description" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="39" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Price" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="25" branch="False" />
+              </lines>
+            </method>
+            <method name="get_DiscountPrice" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="11" hits="30" branch="False" />
+              </lines>
+            </method>
+            <method name="get_ImageUrl" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="12" hits="43" branch="False" />
+              </lines>
+            </method>
+            <method name="get_SKU" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="13" hits="28" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Brand" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="14" hits="39" branch="False" />
+              </lines>
+            </method>
+            <method name="get_StockQuantity" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="15" hits="21" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Rating" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="16" hits="19" branch="False" />
+              </lines>
+            </method>
+            <method name="get_ReviewCount" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="17" hits="19" branch="False" />
+              </lines>
+            </method>
+            <method name="get_ProductType" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="18" hits="20" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Specifications" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="19" hits="20" branch="False" />
+              </lines>
+            </method>
+            <method name="get_IsActive" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="20" hits="29" branch="False" />
+              </lines>
+            </method>
+            <method name="get_CreatedAt" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="21" hits="18" branch="False" />
+              </lines>
+            </method>
+            <method name="get_UpdatedAt" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="22" hits="18" branch="False" />
+              </lines>
+            </method>
+            <method name="get_CategoryId" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="25" hits="20" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Category" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="26" hits="20" branch="False" />
+              </lines>
+            </method>
+            <method name="get_OrderItems" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="29" hits="18" branch="False" />
+              </lines>
+            </method>
+            <method name="get_CartItems" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="30" hits="18" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="7" hits="24" branch="False" />
+            <line number="8" hits="48" branch="False" />
+            <line number="9" hits="39" branch="False" />
+            <line number="10" hits="25" branch="False" />
+            <line number="11" hits="30" branch="False" />
+            <line number="12" hits="43" branch="False" />
+            <line number="13" hits="28" branch="False" />
+            <line number="14" hits="39" branch="False" />
+            <line number="15" hits="21" branch="False" />
+            <line number="16" hits="19" branch="False" />
+            <line number="17" hits="19" branch="False" />
+            <line number="18" hits="20" branch="False" />
+            <line number="19" hits="20" branch="False" />
+            <line number="20" hits="29" branch="False" />
+            <line number="21" hits="18" branch="False" />
+            <line number="22" hits="18" branch="False" />
+            <line number="25" hits="20" branch="False" />
+            <line number="26" hits="20" branch="False" />
+            <line number="29" hits="18" branch="False" />
+            <line number="30" hits="18" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.Core.DTOs.CartItemDto" filename="FlipkartApp.Core\DTOs\CartItemDto.cs" line-rate="0.8571" branch-rate="1" complexity="7">
+          <methods>
+            <method name="get_Id" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="5" hits="7" branch="False" />
+              </lines>
+            </method>
+            <method name="get_ProductId" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="6" hits="8" branch="False" />
+              </lines>
+            </method>
+            <method name="get_ProductName" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="15" branch="False" />
+              </lines>
+            </method>
+            <method name="get_ProductImageUrl" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="11" branch="False" />
+              </lines>
+            </method>
+            <method name="get_ProductPrice" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="7" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Quantity" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="7" branch="False" />
+              </lines>
+            </method>
+            <method name="get_TotalPrice" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="11" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="5" hits="7" branch="False" />
+            <line number="6" hits="8" branch="False" />
+            <line number="7" hits="15" branch="False" />
+            <line number="8" hits="11" branch="False" />
+            <line number="9" hits="7" branch="False" />
+            <line number="10" hits="7" branch="False" />
+            <line number="11" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.Core.DTOs.AddToCartDto" filename="FlipkartApp.Core\DTOs\CartItemDto.cs" line-rate="1" branch-rate="1" complexity="2">
+          <methods>
+            <method name="get_ProductId" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="16" hits="7" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Quantity" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="17" hits="8" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="16" hits="7" branch="False" />
+            <line number="17" hits="8" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.Core.DTOs.UpdateCartDto" filename="FlipkartApp.Core\DTOs\CartItemDto.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="get_Quantity" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="22" hits="5" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="22" hits="5" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.Core.DTOs.CategoryDto" filename="FlipkartApp.Core\DTOs\CategoryDto.cs" line-rate="1" branch-rate="1" complexity="6">
+          <methods>
+            <method name="get_Id" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="12" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Name" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="25" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Description" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="19" branch="False" />
+              </lines>
+            </method>
+            <method name="get_ImageUrl" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="19" branch="False" />
+              </lines>
+            </method>
+            <method name="get_ProductType" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="11" hits="13" branch="False" />
+              </lines>
+            </method>
+            <method name="get_ProductCount" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="12" hits="8" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="7" hits="12" branch="False" />
+            <line number="8" hits="25" branch="False" />
+            <line number="9" hits="19" branch="False" />
+            <line number="10" hits="19" branch="False" />
+            <line number="11" hits="13" branch="False" />
+            <line number="12" hits="8" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.Core.DTOs.OrderDto" filename="FlipkartApp.Core\DTOs\OrderDto.cs" line-rate="1" branch-rate="1" complexity="8">
+          <methods>
+            <method name="get_Id" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="9" branch="False" />
+              </lines>
+            </method>
+            <method name="get_OrderNumber" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="17" branch="False" />
+              </lines>
+            </method>
+            <method name="get_CustomerName" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="17" branch="False" />
+              </lines>
+            </method>
+            <method name="get_CustomerEmail" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="12" branch="False" />
+              </lines>
+            </method>
+            <method name="get_TotalAmount" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="11" hits="9" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Status" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="12" hits="9" branch="False" />
+              </lines>
+            </method>
+            <method name="get_OrderDate" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="13" hits="4" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Items" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="14" hits="16" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="7" hits="9" branch="False" />
+            <line number="8" hits="17" branch="False" />
+            <line number="9" hits="17" branch="False" />
+            <line number="10" hits="12" branch="False" />
+            <line number="11" hits="9" branch="False" />
+            <line number="12" hits="9" branch="False" />
+            <line number="13" hits="4" branch="False" />
+            <line number="14" hits="16" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.Core.DTOs.OrderItemDto" filename="FlipkartApp.Core\DTOs\OrderDto.cs" line-rate="1" branch-rate="1" complexity="5">
+          <methods>
+            <method name="get_ProductId" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="19" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name="get_ProductName" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="20" hits="2" branch="False" />
+              </lines>
+            </method>
+            <method name="get_UnitPrice" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="21" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Quantity" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="22" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name="get_TotalPrice" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="23" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="19" hits="1" branch="False" />
+            <line number="20" hits="2" branch="False" />
+            <line number="21" hits="1" branch="False" />
+            <line number="22" hits="1" branch="False" />
+            <line number="23" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.Core.DTOs.CreateOrderDto" filename="FlipkartApp.Core\DTOs\OrderDto.cs" line-rate="1" branch-rate="1" complexity="4">
+          <methods>
+            <method name="get_CustomerName" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="28" hits="7" branch="False" />
+              </lines>
+            </method>
+            <method name="get_CustomerEmail" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="29" hits="7" branch="False" />
+              </lines>
+            </method>
+            <method name="get_ShippingAddress" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="30" hits="7" branch="False" />
+              </lines>
+            </method>
+            <method name="get_SessionId" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="31" hits="11" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="28" hits="7" branch="False" />
+            <line number="29" hits="7" branch="False" />
+            <line number="30" hits="7" branch="False" />
+            <line number="31" hits="11" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.Core.DTOs.ProductDto" filename="FlipkartApp.Core\DTOs\ProductDto.cs" line-rate="1" branch-rate="1" complexity="13">
+          <methods>
+            <method name="get_Id" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="19" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Name" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="38" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Description" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="28" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Price" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="19" branch="False" />
+              </lines>
+            </method>
+            <method name="get_DiscountPrice" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="11" hits="18" branch="False" />
+              </lines>
+            </method>
+            <method name="get_ImageUrl" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="12" hits="28" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Brand" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="13" hits="36" branch="False" />
+              </lines>
+            </method>
+            <method name="get_StockQuantity" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="14" hits="10" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Rating" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="15" hits="10" branch="False" />
+              </lines>
+            </method>
+            <method name="get_ReviewCount" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="16" hits="10" branch="False" />
+              </lines>
+            </method>
+            <method name="get_ProductType" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="17" hits="18" branch="False" />
+              </lines>
+            </method>
+            <method name="get_CategoryName" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="18" hits="36" branch="False" />
+              </lines>
+            </method>
+            <method name="get_CategoryId" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="19" hits="18" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="7" hits="19" branch="False" />
+            <line number="8" hits="38" branch="False" />
+            <line number="9" hits="28" branch="False" />
+            <line number="10" hits="19" branch="False" />
+            <line number="11" hits="18" branch="False" />
+            <line number="12" hits="28" branch="False" />
+            <line number="13" hits="36" branch="False" />
+            <line number="14" hits="10" branch="False" />
+            <line number="15" hits="10" branch="False" />
+            <line number="16" hits="10" branch="False" />
+            <line number="17" hits="18" branch="False" />
+            <line number="18" hits="36" branch="False" />
+            <line number="19" hits="18" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.Core.DTOs.CreateProductDto" filename="FlipkartApp.Core\DTOs\ProductDto.cs" line-rate="1" branch-rate="1" complexity="11">
+          <methods>
+            <method name="get_Name" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="24" hits="5" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Description" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="25" hits="4" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Price" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="26" hits="3" branch="False" />
+              </lines>
+            </method>
+            <method name="get_DiscountPrice" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="27" hits="3" branch="False" />
+              </lines>
+            </method>
+            <method name="get_ImageUrl" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="28" hits="3" branch="False" />
+              </lines>
+            </method>
+            <method name="get_SKU" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="29" hits="5" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Brand" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="30" hits="4" branch="False" />
+              </lines>
+            </method>
+            <method name="get_StockQuantity" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="31" hits="2" branch="False" />
+              </lines>
+            </method>
+            <method name="get_ProductType" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="32" hits="3" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Specifications" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="33" hits="3" branch="False" />
+              </lines>
+            </method>
+            <method name="get_CategoryId" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="34" hits="3" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="24" hits="5" branch="False" />
+            <line number="25" hits="4" branch="False" />
+            <line number="26" hits="3" branch="False" />
+            <line number="27" hits="3" branch="False" />
+            <line number="28" hits="3" branch="False" />
+            <line number="29" hits="5" branch="False" />
+            <line number="30" hits="4" branch="False" />
+            <line number="31" hits="2" branch="False" />
+            <line number="32" hits="3" branch="False" />
+            <line number="33" hits="3" branch="False" />
+            <line number="34" hits="3" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.Core.DTOs.UpdateProductDto" filename="FlipkartApp.Core\DTOs\ProductDto.cs" line-rate="1" branch-rate="1" complexity="9">
+          <methods>
+            <method name="get_Name" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="39" hits="8" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Description" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="40" hits="5" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Price" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="41" hits="4" branch="False" />
+              </lines>
+            </method>
+            <method name="get_DiscountPrice" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="42" hits="4" branch="False" />
+              </lines>
+            </method>
+            <method name="get_ImageUrl" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="43" hits="5" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Brand" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="44" hits="6" branch="False" />
+              </lines>
+            </method>
+            <method name="get_StockQuantity" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="45" hits="2" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Specifications" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="46" hits="5" branch="False" />
+              </lines>
+            </method>
+            <method name="get_IsActive" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="47" hits="2" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="39" hits="8" branch="False" />
+            <line number="40" hits="5" branch="False" />
+            <line number="41" hits="4" branch="False" />
+            <line number="42" hits="4" branch="False" />
+            <line number="43" hits="5" branch="False" />
+            <line number="44" hits="6" branch="False" />
+            <line number="45" hits="2" branch="False" />
+            <line number="46" hits="5" branch="False" />
+            <line number="47" hits="2" branch="False" />
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="FlipkartApp.Infrastructure" line-rate="0" branch-rate="0" complexity="41">
+      <classes>
+        <class name="FlipkartApp.Infrastructure.Repositories.CartRepository" filename="FlipkartApp.Infrastructure\Repositories\CartRepository.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name=".ctor" signature="(FlipkartApp.Infrastructure.Data.FlipkartDbContext)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="12" hits="0" branch="False" />
+                <line number="14" hits="0" branch="False" />
+                <line number="15" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="12" hits="0" branch="False" />
+            <line number="14" hits="0" branch="False" />
+            <line number="15" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.Infrastructure.Repositories.CartRepository/&lt;AddAsync&gt;d__4" filename="FlipkartApp.Infrastructure\Repositories\CartRepository.cs" line-rate="0" branch-rate="0" complexity="2">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="34" hits="0" branch="False" />
+                <line number="35" hits="0" branch="False" />
+                <line number="37" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="397" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="39" hits="0" branch="False" />
+                <line number="40" hits="0" branch="False" />
+                <line number="41" hits="0" branch="False" />
+                <line number="42" hits="0" branch="False" />
+                <line number="45" hits="0" branch="False" />
+                <line number="46" hits="0" branch="False" />
+                <line number="47" hits="0" branch="False" />
+                <line number="48" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="34" hits="0" branch="False" />
+            <line number="35" hits="0" branch="False" />
+            <line number="37" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="397" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="39" hits="0" branch="False" />
+            <line number="40" hits="0" branch="False" />
+            <line number="41" hits="0" branch="False" />
+            <line number="42" hits="0" branch="False" />
+            <line number="45" hits="0" branch="False" />
+            <line number="46" hits="0" branch="False" />
+            <line number="47" hits="0" branch="False" />
+            <line number="48" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.Infrastructure.Repositories.CartRepository/&lt;ClearCartAsync&gt;d__7" filename="FlipkartApp.Infrastructure\Repositories\CartRepository.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="70" hits="0" branch="False" />
+                <line number="71" hits="0" branch="False" />
+                <line number="72" hits="0" branch="False" />
+                <line number="74" hits="0" branch="False" />
+                <line number="75" hits="0" branch="False" />
+                <line number="76" hits="0" branch="False" />
+                <line number="77" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="70" hits="0" branch="False" />
+            <line number="71" hits="0" branch="False" />
+            <line number="72" hits="0" branch="False" />
+            <line number="74" hits="0" branch="False" />
+            <line number="75" hits="0" branch="False" />
+            <line number="76" hits="0" branch="False" />
+            <line number="77" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.Infrastructure.Repositories.CartRepository/&lt;GetByIdAsync&gt;d__3" filename="FlipkartApp.Infrastructure\Repositories\CartRepository.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="27" hits="0" branch="False" />
+                <line number="28" hits="0" branch="False" />
+                <line number="29" hits="0" branch="False" />
+                <line number="30" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="27" hits="0" branch="False" />
+            <line number="28" hits="0" branch="False" />
+            <line number="29" hits="0" branch="False" />
+            <line number="30" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.Infrastructure.Repositories.CartRepository/&lt;GetBySessionIdAsync&gt;d__2" filename="FlipkartApp.Infrastructure\Repositories\CartRepository.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="19" hits="0" branch="False" />
+                <line number="20" hits="0" branch="False" />
+                <line number="21" hits="0" branch="False" />
+                <line number="22" hits="0" branch="False" />
+                <line number="23" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="19" hits="0" branch="False" />
+            <line number="20" hits="0" branch="False" />
+            <line number="21" hits="0" branch="False" />
+            <line number="22" hits="0" branch="False" />
+            <line number="23" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.Infrastructure.Repositories.CartRepository/&lt;RemoveAsync&gt;d__6" filename="FlipkartApp.Infrastructure\Repositories\CartRepository.cs" line-rate="0" branch-rate="0" complexity="2">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="60" hits="0" branch="False" />
+                <line number="61" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="154" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="63" hits="0" branch="False" />
+                <line number="64" hits="0" branch="False" />
+                <line number="65" hits="0" branch="False" />
+                <line number="66" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="60" hits="0" branch="False" />
+            <line number="61" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="154" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="63" hits="0" branch="False" />
+            <line number="64" hits="0" branch="False" />
+            <line number="65" hits="0" branch="False" />
+            <line number="66" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.Infrastructure.Repositories.CartRepository/&lt;UpdateAsync&gt;d__5" filename="FlipkartApp.Infrastructure\Repositories\CartRepository.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="52" hits="0" branch="False" />
+                <line number="53" hits="0" branch="False" />
+                <line number="54" hits="0" branch="False" />
+                <line number="55" hits="0" branch="False" />
+                <line number="56" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="52" hits="0" branch="False" />
+            <line number="53" hits="0" branch="False" />
+            <line number="54" hits="0" branch="False" />
+            <line number="55" hits="0" branch="False" />
+            <line number="56" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.Infrastructure.Repositories.CategoryRepository" filename="FlipkartApp.Infrastructure\Repositories\CategoryRepository.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name=".ctor" signature="(FlipkartApp.Infrastructure.Data.FlipkartDbContext)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="13" hits="0" branch="False" />
+                <line number="15" hits="0" branch="False" />
+                <line number="16" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="13" hits="0" branch="False" />
+            <line number="15" hits="0" branch="False" />
+            <line number="16" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.Infrastructure.Repositories.CategoryRepository/&lt;CreateAsync&gt;d__5" filename="FlipkartApp.Infrastructure\Repositories\CategoryRepository.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="44" hits="0" branch="False" />
+                <line number="45" hits="0" branch="False" />
+                <line number="46" hits="0" branch="False" />
+                <line number="47" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="44" hits="0" branch="False" />
+            <line number="45" hits="0" branch="False" />
+            <line number="46" hits="0" branch="False" />
+            <line number="47" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.Infrastructure.Repositories.CategoryRepository/&lt;DeleteAsync&gt;d__7" filename="FlipkartApp.Infrastructure\Repositories\CategoryRepository.cs" line-rate="0" branch-rate="0" complexity="2">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="59" hits="0" branch="False" />
+                <line number="60" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="154" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="62" hits="0" branch="False" />
+                <line number="63" hits="0" branch="False" />
+                <line number="64" hits="0" branch="False" />
+                <line number="65" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="59" hits="0" branch="False" />
+            <line number="60" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="154" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="62" hits="0" branch="False" />
+            <line number="63" hits="0" branch="False" />
+            <line number="64" hits="0" branch="False" />
+            <line number="65" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.Infrastructure.Repositories.CategoryRepository/&lt;GetAllAsync&gt;d__2" filename="FlipkartApp.Infrastructure\Repositories\CategoryRepository.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="20" hits="0" branch="False" />
+                <line number="21" hits="0" branch="False" />
+                <line number="22" hits="0" branch="False" />
+                <line number="23" hits="0" branch="False" />
+                <line number="24" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="20" hits="0" branch="False" />
+            <line number="21" hits="0" branch="False" />
+            <line number="22" hits="0" branch="False" />
+            <line number="23" hits="0" branch="False" />
+            <line number="24" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.Infrastructure.Repositories.CategoryRepository/&lt;GetByIdAsync&gt;d__3" filename="FlipkartApp.Infrastructure\Repositories\CategoryRepository.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="28" hits="0" branch="False" />
+                <line number="29" hits="0" branch="False" />
+                <line number="30" hits="0" branch="False" />
+                <line number="31" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="28" hits="0" branch="False" />
+            <line number="29" hits="0" branch="False" />
+            <line number="30" hits="0" branch="False" />
+            <line number="31" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.Infrastructure.Repositories.CategoryRepository/&lt;GetByTypeAsync&gt;d__4" filename="FlipkartApp.Infrastructure\Repositories\CategoryRepository.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="35" hits="0" branch="False" />
+                <line number="36" hits="0" branch="False" />
+                <line number="37" hits="0" branch="False" />
+                <line number="38" hits="0" branch="False" />
+                <line number="39" hits="0" branch="False" />
+                <line number="40" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="35" hits="0" branch="False" />
+            <line number="36" hits="0" branch="False" />
+            <line number="37" hits="0" branch="False" />
+            <line number="38" hits="0" branch="False" />
+            <line number="39" hits="0" branch="False" />
+            <line number="40" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.Infrastructure.Repositories.CategoryRepository/&lt;UpdateAsync&gt;d__6" filename="FlipkartApp.Infrastructure\Repositories\CategoryRepository.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="51" hits="0" branch="False" />
+                <line number="52" hits="0" branch="False" />
+                <line number="53" hits="0" branch="False" />
+                <line number="54" hits="0" branch="False" />
+                <line number="55" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="51" hits="0" branch="False" />
+            <line number="52" hits="0" branch="False" />
+            <line number="53" hits="0" branch="False" />
+            <line number="54" hits="0" branch="False" />
+            <line number="55" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.Infrastructure.Repositories.OrderRepository" filename="FlipkartApp.Infrastructure\Repositories\OrderRepository.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name=".ctor" signature="(FlipkartApp.Infrastructure.Data.FlipkartDbContext)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="12" hits="0" branch="False" />
+                <line number="14" hits="0" branch="False" />
+                <line number="15" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="12" hits="0" branch="False" />
+            <line number="14" hits="0" branch="False" />
+            <line number="15" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.Infrastructure.Repositories.OrderRepository/&lt;CreateAsync&gt;d__5" filename="FlipkartApp.Infrastructure\Repositories\OrderRepository.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="41" hits="0" branch="False" />
+                <line number="42" hits="0" branch="False" />
+                <line number="43" hits="0" branch="False" />
+                <line number="44" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="41" hits="0" branch="False" />
+            <line number="42" hits="0" branch="False" />
+            <line number="43" hits="0" branch="False" />
+            <line number="44" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.Infrastructure.Repositories.OrderRepository/&lt;GetAllAsync&gt;d__2" filename="FlipkartApp.Infrastructure\Repositories\OrderRepository.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="19" hits="0" branch="False" />
+                <line number="20" hits="0" branch="False" />
+                <line number="21" hits="0" branch="False" />
+                <line number="22" hits="0" branch="False" />
+                <line number="23" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="19" hits="0" branch="False" />
+            <line number="20" hits="0" branch="False" />
+            <line number="21" hits="0" branch="False" />
+            <line number="22" hits="0" branch="False" />
+            <line number="23" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.Infrastructure.Repositories.OrderRepository/&lt;GetByIdAsync&gt;d__3" filename="FlipkartApp.Infrastructure\Repositories\OrderRepository.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="27" hits="0" branch="False" />
+                <line number="28" hits="0" branch="False" />
+                <line number="29" hits="0" branch="False" />
+                <line number="30" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="27" hits="0" branch="False" />
+            <line number="28" hits="0" branch="False" />
+            <line number="29" hits="0" branch="False" />
+            <line number="30" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.Infrastructure.Repositories.OrderRepository/&lt;GetByOrderNumberAsync&gt;d__4" filename="FlipkartApp.Infrastructure\Repositories\OrderRepository.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="34" hits="0" branch="False" />
+                <line number="35" hits="0" branch="False" />
+                <line number="36" hits="0" branch="False" />
+                <line number="37" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="34" hits="0" branch="False" />
+            <line number="35" hits="0" branch="False" />
+            <line number="36" hits="0" branch="False" />
+            <line number="37" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.Infrastructure.Repositories.OrderRepository/&lt;UpdateAsync&gt;d__6" filename="FlipkartApp.Infrastructure\Repositories\OrderRepository.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="48" hits="0" branch="False" />
+                <line number="49" hits="0" branch="False" />
+                <line number="50" hits="0" branch="False" />
+                <line number="51" hits="0" branch="False" />
+                <line number="52" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="48" hits="0" branch="False" />
+            <line number="49" hits="0" branch="False" />
+            <line number="50" hits="0" branch="False" />
+            <line number="51" hits="0" branch="False" />
+            <line number="52" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.Infrastructure.Repositories.ProductRepository" filename="FlipkartApp.Infrastructure\Repositories\ProductRepository.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name=".ctor" signature="(FlipkartApp.Infrastructure.Data.FlipkartDbContext)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="13" hits="0" branch="False" />
+                <line number="15" hits="0" branch="False" />
+                <line number="16" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="13" hits="0" branch="False" />
+            <line number="15" hits="0" branch="False" />
+            <line number="16" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.Infrastructure.Repositories.ProductRepository/&lt;CreateAsync&gt;d__7" filename="FlipkartApp.Infrastructure\Repositories\ProductRepository.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="67" hits="0" branch="False" />
+                <line number="68" hits="0" branch="False" />
+                <line number="69" hits="0" branch="False" />
+                <line number="70" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="67" hits="0" branch="False" />
+            <line number="68" hits="0" branch="False" />
+            <line number="69" hits="0" branch="False" />
+            <line number="70" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.Infrastructure.Repositories.ProductRepository/&lt;DeleteAsync&gt;d__9" filename="FlipkartApp.Infrastructure\Repositories\ProductRepository.cs" line-rate="0" branch-rate="0" complexity="2">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="82" hits="0" branch="False" />
+                <line number="83" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="154" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="85" hits="0" branch="False" />
+                <line number="86" hits="0" branch="False" />
+                <line number="87" hits="0" branch="False" />
+                <line number="88" hits="0" branch="False" />
+                <line number="89" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="82" hits="0" branch="False" />
+            <line number="83" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="154" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="85" hits="0" branch="False" />
+            <line number="86" hits="0" branch="False" />
+            <line number="87" hits="0" branch="False" />
+            <line number="88" hits="0" branch="False" />
+            <line number="89" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.Infrastructure.Repositories.ProductRepository/&lt;GetAllAsync&gt;d__2" filename="FlipkartApp.Infrastructure\Repositories\ProductRepository.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="20" hits="0" branch="False" />
+                <line number="21" hits="0" branch="False" />
+                <line number="22" hits="0" branch="False" />
+                <line number="23" hits="0" branch="False" />
+                <line number="24" hits="0" branch="False" />
+                <line number="25" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="20" hits="0" branch="False" />
+            <line number="21" hits="0" branch="False" />
+            <line number="22" hits="0" branch="False" />
+            <line number="23" hits="0" branch="False" />
+            <line number="24" hits="0" branch="False" />
+            <line number="25" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.Infrastructure.Repositories.ProductRepository/&lt;GetByCategoryAsync&gt;d__5" filename="FlipkartApp.Infrastructure\Repositories\ProductRepository.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="45" hits="0" branch="False" />
+                <line number="46" hits="0" branch="False" />
+                <line number="47" hits="0" branch="False" />
+                <line number="48" hits="0" branch="False" />
+                <line number="49" hits="0" branch="False" />
+                <line number="50" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="45" hits="0" branch="False" />
+            <line number="46" hits="0" branch="False" />
+            <line number="47" hits="0" branch="False" />
+            <line number="48" hits="0" branch="False" />
+            <line number="49" hits="0" branch="False" />
+            <line number="50" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.Infrastructure.Repositories.ProductRepository/&lt;GetByIdAsync&gt;d__3" filename="FlipkartApp.Infrastructure\Repositories\ProductRepository.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="29" hits="0" branch="False" />
+                <line number="30" hits="0" branch="False" />
+                <line number="31" hits="0" branch="False" />
+                <line number="32" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="29" hits="0" branch="False" />
+            <line number="30" hits="0" branch="False" />
+            <line number="31" hits="0" branch="False" />
+            <line number="32" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.Infrastructure.Repositories.ProductRepository/&lt;GetByTypeAsync&gt;d__4" filename="FlipkartApp.Infrastructure\Repositories\ProductRepository.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="36" hits="0" branch="False" />
+                <line number="37" hits="0" branch="False" />
+                <line number="38" hits="0" branch="False" />
+                <line number="39" hits="0" branch="False" />
+                <line number="40" hits="0" branch="False" />
+                <line number="41" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="36" hits="0" branch="False" />
+            <line number="37" hits="0" branch="False" />
+            <line number="38" hits="0" branch="False" />
+            <line number="39" hits="0" branch="False" />
+            <line number="40" hits="0" branch="False" />
+            <line number="41" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.Infrastructure.Repositories.ProductRepository/&lt;SearchAsync&gt;d__6" filename="FlipkartApp.Infrastructure\Repositories\ProductRepository.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="54" hits="0" branch="False" />
+                <line number="55" hits="0" branch="False" />
+                <line number="56" hits="0" branch="False" />
+                <line number="57" hits="0" branch="False" />
+                <line number="58" hits="0" branch="False" />
+                <line number="59" hits="0" branch="False" />
+                <line number="60" hits="0" branch="False" />
+                <line number="61" hits="0" branch="False" />
+                <line number="62" hits="0" branch="False" />
+                <line number="63" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="54" hits="0" branch="False" />
+            <line number="55" hits="0" branch="False" />
+            <line number="56" hits="0" branch="False" />
+            <line number="57" hits="0" branch="False" />
+            <line number="58" hits="0" branch="False" />
+            <line number="59" hits="0" branch="False" />
+            <line number="60" hits="0" branch="False" />
+            <line number="61" hits="0" branch="False" />
+            <line number="62" hits="0" branch="False" />
+            <line number="63" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.Infrastructure.Repositories.ProductRepository/&lt;UpdateAsync&gt;d__8" filename="FlipkartApp.Infrastructure\Repositories\ProductRepository.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="74" hits="0" branch="False" />
+                <line number="75" hits="0" branch="False" />
+                <line number="76" hits="0" branch="False" />
+                <line number="77" hits="0" branch="False" />
+                <line number="78" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="74" hits="0" branch="False" />
+            <line number="75" hits="0" branch="False" />
+            <line number="76" hits="0" branch="False" />
+            <line number="77" hits="0" branch="False" />
+            <line number="78" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.Infrastructure.Data.FlipkartDbContext" filename="FlipkartApp.Infrastructure\Data\FlipkartDbContext.cs" line-rate="0" branch-rate="1" complexity="7">
+          <methods>
+            <method name="get_Products" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="11" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Categories" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="12" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_CartItems" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="13" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Orders" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="14" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_OrderItems" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="15" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="OnModelCreating" signature="(Microsoft.EntityFrameworkCore.ModelBuilder)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="19" hits="0" branch="False" />
+                <line number="22" hits="0" branch="False" />
+                <line number="23" hits="0" branch="False" />
+                <line number="24" hits="0" branch="False" />
+                <line number="25" hits="0" branch="False" />
+                <line number="26" hits="0" branch="False" />
+                <line number="27" hits="0" branch="False" />
+                <line number="28" hits="0" branch="False" />
+                <line number="29" hits="0" branch="False" />
+                <line number="30" hits="0" branch="False" />
+                <line number="33" hits="0" branch="False" />
+                <line number="34" hits="0" branch="False" />
+                <line number="35" hits="0" branch="False" />
+                <line number="36" hits="0" branch="False" />
+                <line number="37" hits="0" branch="False" />
+                <line number="38" hits="0" branch="False" />
+                <line number="39" hits="0" branch="False" />
+                <line number="40" hits="0" branch="False" />
+                <line number="41" hits="0" branch="False" />
+                <line number="42" hits="0" branch="False" />
+                <line number="43" hits="0" branch="False" />
+                <line number="44" hits="0" branch="False" />
+                <line number="45" hits="0" branch="False" />
+                <line number="46" hits="0" branch="False" />
+                <line number="47" hits="0" branch="False" />
+                <line number="48" hits="0" branch="False" />
+                <line number="49" hits="0" branch="False" />
+                <line number="50" hits="0" branch="False" />
+                <line number="51" hits="0" branch="False" />
+                <line number="54" hits="0" branch="False" />
+                <line number="55" hits="0" branch="False" />
+                <line number="56" hits="0" branch="False" />
+                <line number="57" hits="0" branch="False" />
+                <line number="58" hits="0" branch="False" />
+                <line number="59" hits="0" branch="False" />
+                <line number="60" hits="0" branch="False" />
+                <line number="61" hits="0" branch="False" />
+                <line number="62" hits="0" branch="False" />
+                <line number="63" hits="0" branch="False" />
+                <line number="64" hits="0" branch="False" />
+                <line number="67" hits="0" branch="False" />
+                <line number="68" hits="0" branch="False" />
+                <line number="69" hits="0" branch="False" />
+                <line number="70" hits="0" branch="False" />
+                <line number="71" hits="0" branch="False" />
+                <line number="72" hits="0" branch="False" />
+                <line number="73" hits="0" branch="False" />
+                <line number="74" hits="0" branch="False" />
+                <line number="75" hits="0" branch="False" />
+                <line number="76" hits="0" branch="False" />
+                <line number="79" hits="0" branch="False" />
+                <line number="80" hits="0" branch="False" />
+                <line number="81" hits="0" branch="False" />
+                <line number="82" hits="0" branch="False" />
+                <line number="83" hits="0" branch="False" />
+                <line number="84" hits="0" branch="False" />
+                <line number="85" hits="0" branch="False" />
+                <line number="86" hits="0" branch="False" />
+                <line number="87" hits="0" branch="False" />
+                <line number="88" hits="0" branch="False" />
+                <line number="89" hits="0" branch="False" />
+                <line number="90" hits="0" branch="False" />
+                <line number="91" hits="0" branch="False" />
+                <line number="92" hits="0" branch="False" />
+                <line number="93" hits="0" branch="False" />
+                <line number="94" hits="0" branch="False" />
+                <line number="95" hits="0" branch="False" />
+                <line number="98" hits="0" branch="False" />
+                <line number="99" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(Microsoft.EntityFrameworkCore.DbContextOptions`1&lt;FlipkartApp.Infrastructure.Data.FlipkartDbContext&gt;)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="11" hits="0" branch="False" />
+            <line number="12" hits="0" branch="False" />
+            <line number="13" hits="0" branch="False" />
+            <line number="14" hits="0" branch="False" />
+            <line number="15" hits="0" branch="False" />
+            <line number="19" hits="0" branch="False" />
+            <line number="22" hits="0" branch="False" />
+            <line number="23" hits="0" branch="False" />
+            <line number="24" hits="0" branch="False" />
+            <line number="25" hits="0" branch="False" />
+            <line number="26" hits="0" branch="False" />
+            <line number="27" hits="0" branch="False" />
+            <line number="28" hits="0" branch="False" />
+            <line number="29" hits="0" branch="False" />
+            <line number="30" hits="0" branch="False" />
+            <line number="33" hits="0" branch="False" />
+            <line number="34" hits="0" branch="False" />
+            <line number="35" hits="0" branch="False" />
+            <line number="36" hits="0" branch="False" />
+            <line number="37" hits="0" branch="False" />
+            <line number="38" hits="0" branch="False" />
+            <line number="39" hits="0" branch="False" />
+            <line number="40" hits="0" branch="False" />
+            <line number="41" hits="0" branch="False" />
+            <line number="42" hits="0" branch="False" />
+            <line number="43" hits="0" branch="False" />
+            <line number="44" hits="0" branch="False" />
+            <line number="45" hits="0" branch="False" />
+            <line number="46" hits="0" branch="False" />
+            <line number="47" hits="0" branch="False" />
+            <line number="48" hits="0" branch="False" />
+            <line number="49" hits="0" branch="False" />
+            <line number="50" hits="0" branch="False" />
+            <line number="51" hits="0" branch="False" />
+            <line number="54" hits="0" branch="False" />
+            <line number="55" hits="0" branch="False" />
+            <line number="56" hits="0" branch="False" />
+            <line number="57" hits="0" branch="False" />
+            <line number="58" hits="0" branch="False" />
+            <line number="59" hits="0" branch="False" />
+            <line number="60" hits="0" branch="False" />
+            <line number="61" hits="0" branch="False" />
+            <line number="62" hits="0" branch="False" />
+            <line number="63" hits="0" branch="False" />
+            <line number="64" hits="0" branch="False" />
+            <line number="67" hits="0" branch="False" />
+            <line number="68" hits="0" branch="False" />
+            <line number="69" hits="0" branch="False" />
+            <line number="70" hits="0" branch="False" />
+            <line number="71" hits="0" branch="False" />
+            <line number="72" hits="0" branch="False" />
+            <line number="73" hits="0" branch="False" />
+            <line number="74" hits="0" branch="False" />
+            <line number="75" hits="0" branch="False" />
+            <line number="76" hits="0" branch="False" />
+            <line number="79" hits="0" branch="False" />
+            <line number="80" hits="0" branch="False" />
+            <line number="81" hits="0" branch="False" />
+            <line number="82" hits="0" branch="False" />
+            <line number="83" hits="0" branch="False" />
+            <line number="84" hits="0" branch="False" />
+            <line number="85" hits="0" branch="False" />
+            <line number="86" hits="0" branch="False" />
+            <line number="87" hits="0" branch="False" />
+            <line number="88" hits="0" branch="False" />
+            <line number="89" hits="0" branch="False" />
+            <line number="90" hits="0" branch="False" />
+            <line number="91" hits="0" branch="False" />
+            <line number="92" hits="0" branch="False" />
+            <line number="93" hits="0" branch="False" />
+            <line number="94" hits="0" branch="False" />
+            <line number="95" hits="0" branch="False" />
+            <line number="98" hits="0" branch="False" />
+            <line number="99" hits="0" branch="False" />
+            <line number="9" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="FlipkartApp.Infrastructure.Data.SeedData" filename="FlipkartApp.Infrastructure\Data\SeedData.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="Seed" signature="(Microsoft.EntityFrameworkCore.ModelBuilder)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="12" hits="0" branch="False" />
+                <line number="13" hits="0" branch="False" />
+                <line number="14" hits="0" branch="False" />
+                <line number="15" hits="0" branch="False" />
+                <line number="16" hits="0" branch="False" />
+                <line number="17" hits="0" branch="False" />
+                <line number="18" hits="0" branch="False" />
+                <line number="21" hits="0" branch="False" />
+                <line number="22" hits="0" branch="False" />
+                <line number="23" hits="0" branch="False" />
+                <line number="24" hits="0" branch="False" />
+                <line number="25" hits="0" branch="False" />
+                <line number="26" hits="0" branch="False" />
+                <line number="27" hits="0" branch="False" />
+                <line number="29" hits="0" branch="False" />
+                <line number="30" hits="0" branch="False" />
+                <line number="33" hits="0" branch="False" />
+                <line number="34" hits="0" branch="False" />
+                <line number="35" hits="0" branch="False" />
+                <line number="36" hits="0" branch="False" />
+                <line number="37" hits="0" branch="False" />
+                <line number="38" hits="0" branch="False" />
+                <line number="39" hits="0" branch="False" />
+                <line number="40" hits="0" branch="False" />
+                <line number="41" hits="0" branch="False" />
+                <line number="44" hits="0" branch="False" />
+                <line number="45" hits="0" branch="False" />
+                <line number="46" hits="0" branch="False" />
+                <line number="47" hits="0" branch="False" />
+                <line number="48" hits="0" branch="False" />
+                <line number="49" hits="0" branch="False" />
+                <line number="50" hits="0" branch="False" />
+                <line number="51" hits="0" branch="False" />
+                <line number="52" hits="0" branch="False" />
+                <line number="54" hits="0" branch="False" />
+                <line number="55" hits="0" branch="False" />
+                <line number="56" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="12" hits="0" branch="False" />
+            <line number="13" hits="0" branch="False" />
+            <line number="14" hits="0" branch="False" />
+            <line number="15" hits="0" branch="False" />
+            <line number="16" hits="0" branch="False" />
+            <line number="17" hits="0" branch="False" />
+            <line number="18" hits="0" branch="False" />
+            <line number="21" hits="0" branch="False" />
+            <line number="22" hits="0" branch="False" />
+            <line number="23" hits="0" branch="False" />
+            <line number="24" hits="0" branch="False" />
+            <line number="25" hits="0" branch="False" />
+            <line number="26" hits="0" branch="False" />
+            <line number="27" hits="0" branch="False" />
+            <line number="29" hits="0" branch="False" />
+            <line number="30" hits="0" branch="False" />
+            <line number="33" hits="0" branch="False" />
+            <line number="34" hits="0" branch="False" />
+            <line number="35" hits="0" branch="False" />
+            <line number="36" hits="0" branch="False" />
+            <line number="37" hits="0" branch="False" />
+            <line number="38" hits="0" branch="False" />
+            <line number="39" hits="0" branch="False" />
+            <line number="40" hits="0" branch="False" />
+            <line number="41" hits="0" branch="False" />
+            <line number="44" hits="0" branch="False" />
+            <line number="45" hits="0" branch="False" />
+            <line number="46" hits="0" branch="False" />
+            <line number="47" hits="0" branch="False" />
+            <line number="48" hits="0" branch="False" />
+            <line number="49" hits="0" branch="False" />
+            <line number="50" hits="0" branch="False" />
+            <line number="51" hits="0" branch="False" />
+            <line number="52" hits="0" branch="False" />
+            <line number="54" hits="0" branch="False" />
+            <line number="55" hits="0" branch="False" />
+            <line number="56" hits="0" branch="False" />
+          </lines>
+        </class>
+      </classes>
+    </package>
+  </packages>
+</coverage>

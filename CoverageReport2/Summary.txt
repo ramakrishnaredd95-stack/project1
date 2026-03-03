@@ -1,0 +1,57 @@
+Summary
+  Generated on: 3/3/2026 - 10:29:14 PM
+  Coverage date: 3/3/2026 - 10:28:54 PM - 3/3/2026 - 10:28:56 PM
+  Parser: MultiReport (2x Cobertura)
+  Assemblies: 3
+  Classes: 31
+  Files: 25
+  Line coverage: 90.1%
+  Covered lines: 641
+  Uncovered lines: 70
+  Coverable lines: 711
+  Total lines: 1408
+  Branch coverage: 68.4% (52 of 76)
+  Covered branches: 52
+  Total branches: 76
+  Method coverage: 93.9% (203 of 216)
+  Full method coverage: 93.9% (203 of 216)
+  Covered methods: 203
+  Fully covered methods: 203
+  Total methods: 216
+
+FlipkartApp.API                                                88.1%
+  FlipkartApp.API.Controllers.CartController                    100%
+  FlipkartApp.API.Controllers.CategoriesController              100%
+  FlipkartApp.API.Controllers.HealthController                  100%
+  FlipkartApp.API.Controllers.OrdersController                  100%
+  FlipkartApp.API.Controllers.ProductsController                100%
+  FlipkartApp.API.Services.CartService                          100%
+  FlipkartApp.API.Services.CategoryService                      100%
+  FlipkartApp.API.Services.OrderService                         100%
+  FlipkartApp.API.Services.ProductService                       100%
+  Program                                                         0%
+
+FlipkartApp.Core                                                 95%
+  FlipkartApp.Core.DTOs.AddToCartDto                            100%
+  FlipkartApp.Core.DTOs.CartItemDto                            85.7%
+  FlipkartApp.Core.DTOs.CategoryDto                             100%
+  FlipkartApp.Core.DTOs.CreateOrderDto                          100%
+  FlipkartApp.Core.DTOs.CreateProductDto                        100%
+  FlipkartApp.Core.DTOs.OrderDto                                100%
+  FlipkartApp.Core.DTOs.OrderItemDto                            100%
+  FlipkartApp.Core.DTOs.ProductDto                              100%
+  FlipkartApp.Core.DTOs.UpdateCartDto                           100%
+  FlipkartApp.Core.DTOs.UpdateProductDto                        100%
+  FlipkartApp.Core.Entities.CartItem                            100%
+  FlipkartApp.Core.Entities.Category                            100%
+  FlipkartApp.Core.Entities.Order                               100%
+  FlipkartApp.Core.Entities.OrderItem                          44.4%
+  FlipkartApp.Core.Entities.Product                             100%
+
+FlipkartApp.Infrastructure                                     90.4%
+  FlipkartApp.Infrastructure.Data.FlipkartDbContext            98.6%
+  FlipkartApp.Infrastructure.Data.SeedData                      100%
+  FlipkartApp.Infrastructure.Repositories.CartRepository        100%
+  FlipkartApp.Infrastructure.Repositories.CategoryRepository   54.5%
+  FlipkartApp.Infrastructure.Repositories.OrderRepository       100%
+  FlipkartApp.Infrastructure.Repositories.ProductRepository    82.3%
