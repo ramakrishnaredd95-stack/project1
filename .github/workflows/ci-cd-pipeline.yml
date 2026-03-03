@@ -264,10 +264,10 @@ jobs:
         run: |
           echo "🔧 Initializing Terraform with remote backend..."
           terraform init \
-            # -backend-config="resource_group_name=flipkart-tfstate-rg" \
-            # -backend-config="storage_account_name=flipkarttfstate124" \
-            # -backend-config="container_name=tfstate" \
-            # -backend-config="key=flipkartapp-dev.terraform.tfstate"
+            -backend-config="resource_group_name=flipkart-tfstate-rg" \
+            -backend-config="storage_account_name=flipkarttfstate124" \
+            -backend-config="container_name=tfstate" \
+            -backend-config="key=flipkartapp-dev.terraform.tfstate"
 
       - name: Terraform Validate
         working-directory: ${{ env.TF_WORKING_DIR }}
