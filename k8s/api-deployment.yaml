@@ -1,0 +1,108 @@
+# API Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flipkart-api
+  namespace: flipkart
+  labels:
+    app: flipkart-api
+    tier: backend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: flipkart-api
+  template:
+    metadata:
+      labels:
+        app: flipkart-api
+        tier: backend
+    spec:
+      containers:
+        - name: flipkart-api
+          image: flipkartacr.azurecr.io/flipkart-api:latest
+          ports:
+            - containerPort: 5000
+          env:
+            - name: ASPNETCORE_ENVIRONMENT
+              value: "Production"
+            - name: ConnectionStrings__DefaultConnection
+              valueFrom:
+                secretKeyRef:
+                  name: flipkart-secrets
+                  key: db-connection-string
+          resources:
+            requests:
+              memory: "256Mi"
+              cpu: "250m"
+            limits:
+              memory: "512Mi"
+              cpu: "500m"
+          livenessProbe:
+            httpGet:
+              path: /api/health/live
+              port: 5000
+            initialDelaySeconds: 15
+            periodSeconds: 20
+          readinessProbe:
+            httpGet:
+              path: /api/health/ready
+              port: 5000
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          startupProbe:
+            httpGet:
+              path: /api/health
+              port: 5000
+            failureThreshold: 30
+            periodSeconds: 10
+---
+# Web Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flipkart-web
+  namespace: flipkart
+  labels:
+    app: flipkart-web
+    tier: frontend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: flipkart-web
+  template:
+    metadata:
+      labels:
+        app: flipkart-web
+        tier: frontend
+    spec:
+      containers:
+        - name: flipkart-web
+          image: flipkartacr.azurecr.io/flipkart-web:latest
+          ports:
+            - containerPort: 5001
+          env:
+            - name: ASPNETCORE_ENVIRONMENT
+              value: "Production"
+            - name: ApiSettings__BaseUrl
+              value: "http://flipkart-api-svc:5000"
+          resources:
+            requests:
+              memory: "128Mi"
+              cpu: "125m"
+            limits:
+              memory: "256Mi"
+              cpu: "250m"
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 5001
+            initialDelaySeconds: 15
+            periodSeconds: 20
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 5001
+            initialDelaySeconds: 5
+            periodSeconds: 10

@@ -1,0 +1,53 @@
+## .NET build outputs
+bin/
+obj/
+out/
+publish/
+
+## Terraform state & sensitive files
+*.tfstate
+*.tfstate.backup
+*.tfvars
+.terraform/
+.terraform.lock.hcl
+terraform/.terraform/
+terraform/modules/**/.terraform/
+
+## VS / Rider
+.vs/
+*.user
+*.suo
+*.DotSettings.user
+.idea/
+
+## NuGet
+*.nupkg
+*.snupkg
+packages/
+NuGetFallbackFolder/
+
+## Test Results
+TestResults/
+CoverageReport/
+coverage.opencover.xml
+*.trx
+*.coveragexml
+
+## Environment / Secrets
+.env
+*.env.local
+appsettings.*.json
+!appsettings.json
+!appsettings.Development.json
+
+## Docker
+docker/data/
+
+## OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+## Logs
+*.log
+logs/

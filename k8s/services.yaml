@@ -1,0 +1,33 @@
+# API Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: flipkart-api-svc
+  namespace: flipkart
+  labels:
+    app: flipkart-api
+spec:
+  type: ClusterIP
+  ports:
+    - port: 5000
+      targetPort: 5000
+      protocol: TCP
+  selector:
+    app: flipkart-api
+---
+# Web Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: flipkart-web-svc
+  namespace: flipkart
+  labels:
+    app: flipkart-web
+spec:
+  type: ClusterIP
+  ports:
+    - port: 5001
+      targetPort: 5001
+      protocol: TCP
+  selector:
+    app: flipkart-web

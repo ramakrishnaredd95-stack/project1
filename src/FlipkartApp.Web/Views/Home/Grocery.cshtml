@@ -1,0 +1,29 @@
+@model List<FlipkartApp.Core.DTOs.ProductDto>
+@{
+    ViewData["Title"] = "Grocery Essentials";
+}
+
+<div class="section">
+    <div class="section-header">
+        <h2>🛒 Grocery Essentials</h2>
+    </div>
+    <div class="product-grid">
+        @foreach (var product in Model)
+        {
+            <div class="product-card">
+                <a href="/Home/ProductDetail/@product.Id">
+                    <img src="@product.ImageUrl" alt="@product.Name" onerror="this.src='https://via.placeholder.com/200x200?text=🛒'" />
+                    <div class="brand">@product.Brand</div>
+                    <div class="name">@product.Name</div>
+                    <div>
+                        <span class="price">₹@product.DiscountPrice.ToString("N0")</span>
+                        <span class="original-price">₹@product.Price.ToString("N0")</span>
+                        @{ var discount = Math.Round((1 - (double)product.DiscountPrice / (double)product.Price) * 100); }
+                        <span class="discount">@(discount)% off</span>
+                    </div>
+                    <div class="rating">@product.Rating ★ | @product.ReviewCount</div>
+                </a>
+            </div>
+        }
+    </div>
+</div>

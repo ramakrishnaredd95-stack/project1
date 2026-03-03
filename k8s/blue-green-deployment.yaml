@@ -1,0 +1,123 @@
+# Blue-Green Deployment for Production
+# Blue = current production, Green = new version
+# Switch by updating service selector
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flipkart-api-blue
+  namespace: flipkart-prod
+  labels:
+    app: flipkart-api
+    slot: blue
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: flipkart-api
+      slot: blue
+  template:
+    metadata:
+      labels:
+        app: flipkart-api
+        slot: blue
+    spec:
+      containers:
+        - name: flipkart-api
+          image: flipkartacr.azurecr.io/flipkart-api:v1.0.0
+          ports:
+            - containerPort: 5000
+          env:
+            - name: ASPNETCORE_ENVIRONMENT
+              value: "Production"
+            - name: ConnectionStrings__DefaultConnection
+              valueFrom:
+                secretKeyRef:
+                  name: flipkart-secrets
+                  key: db-connection-string
+          resources:
+            requests:
+              memory: "512Mi"
+              cpu: "500m"
+            limits:
+              memory: "1Gi"
+              cpu: "1000m"
+          livenessProbe:
+            httpGet:
+              path: /api/health/live
+              port: 5000
+            initialDelaySeconds: 15
+            periodSeconds: 20
+          readinessProbe:
+            httpGet:
+              path: /api/health/ready
+              port: 5000
+            initialDelaySeconds: 5
+            periodSeconds: 10
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flipkart-api-green
+  namespace: flipkart-prod
+  labels:
+    app: flipkart-api
+    slot: green
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: flipkart-api
+      slot: green
+  template:
+    metadata:
+      labels:
+        app: flipkart-api
+        slot: green
+    spec:
+      containers:
+        - name: flipkart-api
+          image: flipkartacr.azurecr.io/flipkart-api:v2.0.0
+          ports:
+            - containerPort: 5000
+          env:
+            - name: ASPNETCORE_ENVIRONMENT
+              value: "Production"
+            - name: ConnectionStrings__DefaultConnection
+              valueFrom:
+                secretKeyRef:
+                  name: flipkart-secrets
+                  key: db-connection-string
+          resources:
+            requests:
+              memory: "512Mi"
+              cpu: "500m"
+            limits:
+              memory: "1Gi"
+              cpu: "1000m"
+          livenessProbe:
+            httpGet:
+              path: /api/health/live
+              port: 5000
+            initialDelaySeconds: 15
+            periodSeconds: 20
+          readinessProbe:
+            httpGet:
+              path: /api/health/ready
+              port: 5000
+            initialDelaySeconds: 5
+            periodSeconds: 10
+---
+# Production Service - Switch between blue/green by changing slot selector
+apiVersion: v1
+kind: Service
+metadata:
+  name: flipkart-api-svc
+  namespace: flipkart-prod
+spec:
+  type: ClusterIP
+  ports:
+    - port: 5000
+      targetPort: 5000
+  selector:
+    app: flipkart-api
+    slot: blue  # Change to 'green' to switch traffic

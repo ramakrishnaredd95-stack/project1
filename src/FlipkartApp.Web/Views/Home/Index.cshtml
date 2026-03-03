@@ -1,0 +1,69 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<!-- Hero Banner -->
+<div class="hero">
+    <h1>Welcome to FlipkartApp</h1>
+    <p>India's most loved shopping destination for mobiles, electronics, grocery & more. Enjoy amazing deals every day!</p>
+</div>
+
+<!-- Mobile Products Section -->
+<div class="section">
+    <div class="section-header">
+        <h2>📱 Best of Mobiles</h2>
+        <a href="/Home/Mobile">View All →</a>
+    </div>
+    <div class="product-grid">
+        @if (ViewBag.MobileProducts != null)
+        {
+            foreach (var product in ViewBag.MobileProducts)
+            {
+                <div class="product-card">
+                    <a href="/Home/ProductDetail/@product.Id">
+                        <img src="@product.ImageUrl" alt="@product.Name" onerror="this.src='https://via.placeholder.com/200x200?text=📱'" />
+                        <div class="brand">@product.Brand</div>
+                        <div class="name">@product.Name</div>
+                        <div>
+                            <span class="price">₹@product.DiscountPrice.ToString("N0")</span>
+                            <span class="original-price">₹@product.Price.ToString("N0")</span>
+                            @{ var mobileDiscount = Math.Round((1 - (double)product.DiscountPrice / (double)product.Price) * 100); }
+                            <span class="discount">@(mobileDiscount)% off</span>
+                        </div>
+                        <div class="rating">@product.Rating ★ | @product.ReviewCount</div>
+                    </a>
+                </div>
+            }
+        }
+    </div>
+</div>
+
+<!-- Grocery Products Section -->
+<div class="section">
+    <div class="section-header">
+        <h2>🛒 Grocery Essentials</h2>
+        <a href="/Home/Grocery">View All →</a>
+    </div>
+    <div class="product-grid">
+        @if (ViewBag.GroceryProducts != null)
+        {
+            foreach (var product in ViewBag.GroceryProducts)
+            {
+                <div class="product-card">
+                    <a href="/Home/ProductDetail/@product.Id">
+                        <img src="@product.ImageUrl" alt="@product.Name" onerror="this.src='https://via.placeholder.com/200x200?text=🛒'" />
+                        <div class="brand">@product.Brand</div>
+                        <div class="name">@product.Name</div>
+                        <div>
+                            <span class="price">₹@product.DiscountPrice.ToString("N0")</span>
+                            <span class="original-price">₹@product.Price.ToString("N0")</span>
+                            @{ var groceryDiscount = Math.Round((1 - (double)product.DiscountPrice / (double)product.Price) * 100); }
+                            <span class="discount">@(groceryDiscount)% off</span>
+                        </div>
+                        <div class="rating">@product.Rating ★ | @product.ReviewCount</div>
+                    </a>
+                </div>
+            }
+        }
+    </div>
+</div>

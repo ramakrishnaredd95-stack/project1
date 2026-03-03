@@ -1,0 +1,104 @@
+# Canary Deployment for Staging
+# Used for progressive rollout: 10% → 50% → 100%
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flipkart-api-canary
+  namespace: flipkart-staging
+  labels:
+    app: flipkart-api
+    track: canary
+spec:
+  replicas: 1  # Start with 10% (1 replica vs 9 stable)
+  selector:
+    matchLabels:
+      app: flipkart-api
+      track: canary
+  template:
+    metadata:
+      labels:
+        app: flipkart-api
+        track: canary
+    spec:
+      containers:
+        - name: flipkart-api
+          image: flipkartacr.azurecr.io/flipkart-api:canary
+          ports:
+            - containerPort: 5000
+          env:
+            - name: ASPNETCORE_ENVIRONMENT
+              value: "Staging"
+            - name: ConnectionStrings__DefaultConnection
+              valueFrom:
+                secretKeyRef:
+                  name: flipkart-secrets
+                  key: db-connection-string
+          resources:
+            requests:
+              memory: "256Mi"
+              cpu: "250m"
+            limits:
+              memory: "512Mi"
+              cpu: "500m"
+          readinessProbe:
+            httpGet:
+              path: /api/health/ready
+              port: 5000
+            initialDelaySeconds: 5
+            periodSeconds: 10
+---
+# Stable Deployment (existing in staging)
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flipkart-api-stable
+  namespace: flipkart-staging
+  labels:
+    app: flipkart-api
+    track: stable
+spec:
+  replicas: 9  # 90% traffic
+  selector:
+    matchLabels:
+      app: flipkart-api
+      track: stable
+  template:
+    metadata:
+      labels:
+        app: flipkart-api
+        track: stable
+    spec:
+      containers:
+        - name: flipkart-api
+          image: flipkartacr.azurecr.io/flipkart-api:stable
+          ports:
+            - containerPort: 5000
+          env:
+            - name: ASPNETCORE_ENVIRONMENT
+              value: "Staging"
+            - name: ConnectionStrings__DefaultConnection
+              valueFrom:
+                secretKeyRef:
+                  name: flipkart-secrets
+                  key: db-connection-string
+          resources:
+            requests:
+              memory: "256Mi"
+              cpu: "250m"
+            limits:
+              memory: "512Mi"
+              cpu: "500m"
+---
+# Shared Service (routes to both canary and stable via label selector)
+apiVersion: v1
+kind: Service
+metadata:
+  name: flipkart-api-svc
+  namespace: flipkart-staging
+spec:
+  type: ClusterIP
+  ports:
+    - port: 5000
+      targetPort: 5000
+  selector:
+    app: flipkart-api  # matches both canary and stable pods

@@ -1,0 +1,59 @@
+version: '3.8'
+
+services:
+  flipkart-db:
+    image: mcr.microsoft.com/azure-sql-edge:latest
+    container_name: flipkart-db
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: "FlipkartP@ss2024!"
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqldata:/var/opt/mssql
+    networks:
+      - flipkart-network
+    healthcheck:
+      test: ["/opt/mssql-tools/bin/sqlcmd", "-S", "localhost", "-U", "sa", "-P", "FlipkartP@ss2024!", "-Q", "SELECT 1"]
+      interval: 10s
+      timeout: 3s
+      retries: 10
+      start_period: 30s
+
+  flipkart-api:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.api
+    container_name: flipkart-api
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Server=flipkart-db,1433;Database=FlipkartAppDb;User Id=sa;Password=FlipkartP@ss2024!;TrustServerCertificate=True;
+    ports:
+      - "5000:5000"
+    depends_on:
+      flipkart-db:
+        condition: service_healthy
+    networks:
+      - flipkart-network
+
+  flipkart-web:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.web
+    container_name: flipkart-web
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ApiSettings__BaseUrl=http://flipkart-api:5000
+    ports:
+      - "5001:5001"
+    depends_on:
+      - flipkart-api
+    networks:
+      - flipkart-network
+
+volumes:
+  sqldata:
+
+networks:
+  flipkart-network:
+    driver: bridge
