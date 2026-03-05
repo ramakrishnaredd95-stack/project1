@@ -292,13 +292,13 @@ jobs:
             -var="aks_dns_prefix=flipkartdev" \
             -var="aks_node_count=2" \
             -var="aks_vm_size=Standard_B2s" \
-            -out=dev.tfvars
+            -out=tfplan-dev
 
       - name: Terraform Apply — Provision AKS & Azure SQL
         working-directory: ${{ env.TF_WORKING_DIR }}
         run: |
           echo "🚀 Applying Terraform plan — provisioning Azure infrastructure..."
-          terraform apply -auto-approve dev.tfvars
+          terraform apply -auto-approve tfplan-dev
           
           echo "📤 Capturing Terraform outputs..."
           AKS_NAME=$(terraform output -raw aks_cluster_name)
