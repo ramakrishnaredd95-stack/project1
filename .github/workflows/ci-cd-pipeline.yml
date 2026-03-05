@@ -282,7 +282,7 @@ jobs:
           echo "📋 Planning infrastructure changes..."
           terraform plan \
             -var="resource_group_name=flipkartapp-dev-rg" \
-            -var="location=East US" \
+            -var="location=canadacentral" \
             -var="sql_server_name=flipkartapp-dev-sql" \
             -var="sql_db_name=FlipkartAppDevDb" \
             -var="sql_admin_login=${{ secrets.SQL_ADMIN_LOGIN }}" \
