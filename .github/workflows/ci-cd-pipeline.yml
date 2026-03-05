@@ -292,14 +292,13 @@ jobs:
             -var="aks_dns_prefix=flipkartdev" \
             -var="aks_node_count=2" \
             -var="aks_vm_size=Standard_B2s" \
-            -out=tfplan-dev \
-            -detailed-exitcode || echo "TF_EXIT=$?" >> $GITHUB_ENV
+            -out=dev.tfvars
 
       - name: Terraform Apply — Provision AKS & Azure SQL
         working-directory: ${{ env.TF_WORKING_DIR }}
         run: |
           echo "🚀 Applying Terraform plan — provisioning Azure infrastructure..."
-          terraform apply -auto-approve tfplan-dev
+          terraform apply -auto-approve dev.tfvars
           
           echo "📤 Capturing Terraform outputs..."
           AKS_NAME=$(terraform output -raw aks_cluster_name)
