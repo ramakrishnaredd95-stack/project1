@@ -1,11 +1,11 @@
 # Dev environment Terraform variable overrides
-resource_group_name = "flipkartapp-dev-rg"
-location            = "canda center"
-sql_server_name     = "flipkartapp-dev-121"
-sql_db_name         = "FlipkartAppDevDb121"
+resource_group_name = "flipkartapp-dev-35"
+location            = "canada central"
+sql_server_name     = "flipkartapp-dev-35"
+sql_db_name         = "FlipkartAppDevDb35"
 acr_name            = "flipkartdevacr"
-aks_cluster_name    = "flipkartapp-dev-aks132"
-aks_dns_prefix      = "flipkartdev132"
+aks_cluster_name    = "flipkartapp-dev-aks35"
+aks_dns_prefix      = "flipkartdev35"
 aks_node_count      = 2
 aks_vm_size         = "Standard_B2s"
 

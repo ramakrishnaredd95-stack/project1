@@ -2,6 +2,11 @@ output "resource_group_name" {
   value = azurerm_resource_group.main.name
 }
 
+# output "keyvault_uri" {
+#   value = module.keyvault.keyvault_uri
+# }
+
+
 output "sql_server_fqdn" {
   value = module.sql.sql_server_fqdn
 }
