@@ -7,7 +7,7 @@ variable "sql_admin_password" { type = string }
 variable "tags" { type = map(string) }
 
 resource "azurerm_mssql_server" "main" {
-  name                         = var.sql_server_name
+  name                         = lower(var.sql_server_name)
   resource_group_name          = var.resource_group_name
   location                     = var.location
   version                      = "12.0"
