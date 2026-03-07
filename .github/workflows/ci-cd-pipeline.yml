@@ -10,7 +10,7 @@ env:
   DOTNET_VERSION: '10.0.x'
   ACR_NAME: flipkartdevacr
   ACR_LOGIN_SERVER: flipkartdevacr.azurecr.io
-  AKS_CLUSTER_NAME: flipkartapp-aks35
+  AKS_CLUSTER_NAME: flipkartappdevaks35
   RESOURCE_GROUP: flipkartapp-rg
   API_IMAGE: flipkart-api
   WEB_IMAGE: flipkart-web
@@ -310,8 +310,8 @@ jobs:
         run: |
           echo "🔧 Initializing Terraform with remote backend..."
           terraform init \
-            -backend-config="resource_group_name=rg-storage-account" \
-            -backend-config="storage_account_name=flipkarttfstate126" \
+            -backend-config="resource_group_name=rsg-storage-account" \
+            -backend-config="storage_account_name=storageaccount9802" \
             -backend-config="container_name=tfstate" \
             -backend-config="key=flipkartapp-dev.terraform.tfstate"
 
@@ -332,13 +332,13 @@ jobs:
           terraform plan \
             -var="resource_group_name=flipkartapp-dev-35" \
             -var="location=canadacentral" \
-            -var="sql_server_name=flipkartapp-dev-35" \
+            -var="sql_server_name=flipkaRtappsql5635" \
             -var="sql_db_name=FlipkartAppDevDb35" \
             -var="sql_admin_login=${{ secrets.SQL_ADMIN_LOGIN }}" \
             -var="sql_admin_password=${{ secrets.SQL_ADMIN_PASSWORD }}" \
             -var="keyvault_name=flipkart-kv" \
             -var="acr_name=flipkartdevacr" \
-            -var="aks_cluster_name=flipkartapp-dev-aks35" \
+            -var="aks_cluster_name=flipkartappdevaks35" \
             -var="aks_dns_prefix=flipkartdev35" \
             -var="aks_node_count=2" \
             -var="aks_vm_size=Standard_B2s" \
