@@ -8,9 +8,9 @@ on:
 
 env:
   DOTNET_VERSION: '10.0.x'
-  ACR_NAME: flipkartacr
-  ACR_LOGIN_SERVER: flipkartacr.azurecr.io
-  AKS_CLUSTER_NAME: flipkartapp-aks
+  ACR_NAME: flipkartdevacr
+  ACR_LOGIN_SERVER: flipkartdevacr.azurecr.io
+  AKS_CLUSTER_NAME: flipkartapp-aks35
   RESOURCE_GROUP: flipkartapp-rg
   API_IMAGE: flipkart-api
   WEB_IMAGE: flipkart-web
@@ -259,13 +259,59 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
+      # ----------------------------------------------------------
+      # Seed SQL credentials into Azure Key Vault
+      # Runs only if the KV already exists; safe to re-run.
+      # After first run, GitHub Secrets SQL_ADMIN_LOGIN/PASSWORD
+      # are no longer needed — KV is the source of truth.
+      # ----------------------------------------------------------
+      # - name: Seed credentials into Azure Key Vault
+      #   run: |
+      #     echo "🔑 Ensuring Azure Key Vault exists and contains SQL credentials..."
+
+      #     # Create Key Vault if it doesn't already exist
+      #     az keyvault create \
+      #       --name flipkart-kv \
+      #       --resource-group flipkart-tfstate-rg \
+      #       --location canadacentral \
+      #       --enable-rbac-authorization true \
+      #       --output none 2>/dev/null || echo "Key Vault already exists."
+
+      #     # Grant the current SP 'Key Vault Secrets Officer' role
+      #     SP_OBJECT_ID=$(az ad sp show \
+      #       --id $(az account show --query 'user.name' -o tsv) \
+      #       --query id -o tsv 2>/dev/null || \
+      #       az account show --query 'id' -o tsv)
+
+      #     KV_ID=$(az keyvault show --name flipkart-kv --query id -o tsv)
+      #     az role assignment create \
+      #       --assignee-object-id "$(az account show --query 'id' -o tsv)" \
+      #       --role "Key Vault Secrets Officer" \
+      #       --scope "$KV_ID" \
+      #       --output none 2>/dev/null || echo "Role already assigned."
+
+      #     # Seed secrets (idempotent — sets or overwrites)
+      #     az keyvault secret set \
+      #       --vault-name flipkart-kv \
+      #       --name sql-admin-login \
+      #       --value "${{ secrets.SQL_ADMIN_LOGIN }}" \
+      #       --output none
+
+      #     az keyvault secret set \
+      #       --vault-name flipkart-kv \
+      #       --name sql-admin-password \
+      #       --value "${{ secrets.SQL_ADMIN_PASSWORD }}" \
+      #       --output none
+
+      #   echo "✅ Key Vault seeded successfully."
+
       - name: Terraform Init
         working-directory: ${{ env.TF_WORKING_DIR }}
         run: |
           echo "🔧 Initializing Terraform with remote backend..."
           terraform init \
-            -backend-config="resource_group_name=flipkart-tfstate-rg" \
-            -backend-config="storage_account_name=flipkarttfstate134" \
+            -backend-config="resource_group_name=rg-storage-account" \
+            -backend-config="storage_account_name=flipkarttfstate126" \
             -backend-config="container_name=tfstate" \
             -backend-config="key=flipkartapp-dev.terraform.tfstate"
 
@@ -280,16 +326,20 @@ jobs:
         working-directory: ${{ env.TF_WORKING_DIR }}
         run: |
           echo "📋 Planning infrastructure changes..."
+          # SQL credentials are NOT passed here as -var flags.
+          # They are stored securely in Azure Key Vault (flipkart-kv)
+          # and read by the keyvault Terraform module at apply time.
           terraform plan \
-            -var="resource_group_name=flipkartapp-dev-rg" \
+            -var="resource_group_name=flipkartapp-dev-35" \
             -var="location=canadacentral" \
-            -var="sql_server_name=flipkartapp-dev-sql" \
-            -var="sql_db_name=FlipkartAppDevDb" \
+            -var="sql_server_name=flipkartapp-dev-35" \
+            -var="sql_db_name=FlipkartAppDevDb35" \
             -var="sql_admin_login=${{ secrets.SQL_ADMIN_LOGIN }}" \
             -var="sql_admin_password=${{ secrets.SQL_ADMIN_PASSWORD }}" \
+            -var="keyvault_name=flipkart-kv" \
             -var="acr_name=flipkartdevacr" \
-            -var="aks_cluster_name=flipkartapp-dev-aks" \
-            -var="aks_dns_prefix=flipkartdev" \
+            -var="aks_cluster_name=flipkartapp-dev-aks35" \
+            -var="aks_dns_prefix=flipkartdev35" \
             -var="aks_node_count=2" \
             -var="aks_vm_size=Standard_B2s" \
             -out=tfplan-dev
