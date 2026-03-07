@@ -332,7 +332,7 @@ jobs:
           terraform plan \
             -var="resource_group_name=flipkartapp-dev-35" \
             -var="location=canadacentral" \
-            -var="sql_server_name=flipkaRtappsql5635" \
+            -var="sql_server_name=flipkartappsql5635" \
             -var="sql_db_name=FlipkartAppDevDb35" \
             -var="sql_admin_login=${{ secrets.SQL_ADMIN_LOGIN }}" \
             -var="sql_admin_password=${{ secrets.SQL_ADMIN_PASSWORD }}" \
