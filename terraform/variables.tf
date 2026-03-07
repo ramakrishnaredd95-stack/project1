@@ -65,11 +65,11 @@ variable "aks_vm_size" {
   default     = "Standard_B2s"
 }
 
-# variable "keyvault_name" {
-#   description = "Name of the Azure Key Vault (must be globally unique)"
-#   type        = string
-#   default     = "flipkart-kv"
-# }
+variable "keyvault_name" {
+  description = "Name of the Azure Key Vault (must be globally unique)"
+  type        = string
+  default     = "flipkart-kv"
+}
 
 variable "tags" {
   description = "Tags for all resources"

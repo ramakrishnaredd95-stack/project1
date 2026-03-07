@@ -24,20 +24,20 @@ resource "azurerm_resource_group" "main" {
   tags     = var.tags
 }
 
-# # ---------------------------------------------------------------
-# # Key Vault Module
-# # Provisions the vault and stores SQL credentials as secrets
-# # ---------------------------------------------------------------
-# module "keyvault" {
-#   source              = "./modules/keyvault"
-#   resource_group_name = azurerm_resource_group.main.name
-#   location            = azurerm_resource_group.main.location
-#   keyvault_name       = var.keyvault_name
-#   sp_object_id        = data.azurerm_client_config.current.object_id
-#   sql_admin_login     = var.sql_admin_login
-#   sql_admin_password  = var.sql_admin_password
-#   tags                = var.tags
-# }
+# ---------------------------------------------------------------
+# Key Vault Module
+# Provisions the vault and stores SQL credentials as secrets
+# ---------------------------------------------------------------
+module "keyvault" {
+  source              = "./modules/keyvault"
+  resource_group_name = azurerm_resource_group.main.name
+  location            = azurerm_resource_group.main.location
+  keyvault_name       = var.keyvault_name
+  sp_object_id        = data.azurerm_client_config.current.object_id
+  sql_admin_login     = var.sql_admin_login
+  sql_admin_password  = var.sql_admin_password
+  tags                = var.tags
+}
 
 # ---------------------------------------------------------------
 # Azure SQL Module
@@ -53,7 +53,7 @@ module "sql" {
   sql_admin_password  = module.keyvault.sql_admin_password
   tags                = var.tags
 
-  # depends_on = [module.keyvault]
+  depends_on = [module.keyvault]
 }
 
 # Azure Container Registry Module

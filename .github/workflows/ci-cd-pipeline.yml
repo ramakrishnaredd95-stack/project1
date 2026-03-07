@@ -11,7 +11,7 @@ env:
   ACR_NAME: flipkartdevacr
   ACR_LOGIN_SERVER: flipkartdevacr.azurecr.io
   AKS_CLUSTER_NAME: flipkartappdevaks35
-  RESOURCE_GROUP: flipkartapp-rg
+  RESOURCE_GROUP: flipkartapp-dev-35
   API_IMAGE: flipkart-api
   WEB_IMAGE: flipkart-web
 
@@ -354,10 +354,15 @@ jobs:
           AKS_NAME=$(terraform output -raw aks_cluster_name)
           SQL_FQDN=$(terraform output -raw sql_server_fqdn)
           ACR_SERVER=$(terraform output -raw acr_login_server)
+          RG_NAME=$(terraform output -raw resource_group_name)
+          SQL_CONN=$(terraform output -raw sql_connection_string)
           
           echo "AKS_CLUSTER_NAME_DEV=${AKS_NAME}" >> $GITHUB_ENV
           echo "SQL_FQDN_DEV=${SQL_FQDN}" >> $GITHUB_ENV
           echo "ACR_LOGIN_SERVER_DEV=${ACR_SERVER}" >> $GITHUB_ENV
+          echo "RG_NAME_DEV=${RG_NAME}" >> $GITHUB_ENV
+          echo "::add-mask::${SQL_CONN}"
+          echo "SQL_CONN_DEV=${SQL_CONN}" >> $GITHUB_ENV
           
           echo "✅ Infrastructure provisioned:"
           echo "   AKS : ${AKS_NAME}"
@@ -368,8 +373,8 @@ jobs:
         run: |
           echo "🔑 Retrieving AKS credentials..."
           az aks get-credentials \
-            --resource-group flipkartapp-dev-rg \
-            --name flipkartapp-dev-aks \
+            --resource-group ${{ env.RG_NAME_DEV }} \
+            --name ${{ env.AKS_CLUSTER_NAME_DEV }} \
             --overwrite-existing
           kubectl cluster-info
           echo "✅ AKS context configured"
@@ -381,16 +386,15 @@ jobs:
         run: |
           kubectl create namespace flipkart-dev --dry-run=client -o yaml | kubectl apply -f -
 
-          # Create DB connection secret using the known dev SQL server name
-          SQL_CONN="Server=tcp:flipkartapp-dev-sql.database.windows.net,1433;Initial Catalog=FlipkartAppDevDb;User ID=${{ secrets.SQL_ADMIN_LOGIN }};Password=${{ secrets.SQL_ADMIN_PASSWORD }};Encrypt=True;TrustServerCertificate=False;"
+          # Create DB connection secret using the connection string from Terraform
           kubectl create secret generic flipkart-secrets \
-            --from-literal=db-connection-string="${SQL_CONN}" \
+            --from-literal=db-connection-string="${{ env.SQL_CONN_DEV }}" \
             -n flipkart-dev \
             --dry-run=client -o yaml | kubectl apply -f -
 
       - name: Deploy to Dev AKS
         run: |
-          ACR=flipkartdevacr.azurecr.io
+          ACR=${{ env.ACR_LOGIN_SERVER_DEV }}
           
           # Patch image tags with the built SHA
           sed -i "s|flipkartacr.azurecr.io/flipkart-api:latest|${ACR}/${{ env.API_IMAGE }}:${{ github.sha }}|g" k8s/api-deployment.yaml
@@ -433,9 +437,18 @@ jobs:
         run: |
           echo "⚠️ Deploy failed — cleaning up dev infrastructure..."
           terraform destroy \
-            -var="resource_group_name=flipkartapp-dev-rg" \
+            -var="resource_group_name=flipkartapp-dev-35" \
+            -var="location=canadacentral" \
+            -var="sql_server_name=flipkaRtappsql5635" \
+            -var="sql_db_name=FlipkartAppDevDb35" \
             -var="sql_admin_login=${{ secrets.SQL_ADMIN_LOGIN }}" \
             -var="sql_admin_password=${{ secrets.SQL_ADMIN_PASSWORD }}" \
+            -var="keyvault_name=flipkart-kv" \
+            -var="acr_name=flipkartdevacr" \
+            -var="aks_cluster_name=flipkartappdevaks35" \
+            -var="aks_dns_prefix=flipkartdev35" \
+            -var="aks_node_count=2" \
+            -var="aks_vm_size=Standard_B2s" \
             -auto-approve || true
 
   # ============================================================
