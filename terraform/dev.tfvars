@@ -1,7 +1,7 @@
 # Dev environment Terraform variable overrides
 resource_group_name = "flipkartapp-dev-aks-35"
 location            = "canada central"
-sql_server_name     = "flipkartappsql5635"
+sql_server_name     = "flipkart-dev-sql-35"
 sql_db_name         = "FlipkartAppDevDb35"
 acr_name            = "flipkartdevacr"
 aks_cluster_name    = "flipkartappdevaks35"
