@@ -53,7 +53,7 @@ module "sql" {
   sql_admin_password  = module.keyvault.sql_admin_password
   tags                = var.tags
 
-  depends_on = [module.keyvault]
+  # depends_on = [module.keyvault]
 }
 
 # Azure Container Registry Module
