@@ -1,10 +1,11 @@
 name: FlipkartApp CI/CD Pipeline
 
-on:
-  push:
-    branches: [ main, develop ]
-  pull_request:
-    branches: [ main ]
+on: 
+  workflow_dispatch:
+  # push:
+  #   branches: [ main, develop ]
+  # pull_request:
+  #   branches: [ main ]
 
 env:
   DOTNET_VERSION: '10.0.x'
@@ -435,7 +436,7 @@ jobs:
         if: failure()
         working-directory: ${{ env.TF_WORKING_DIR }}
         run: |
-          echo "⚠️ Deploy failed — cleaning up dev infrastructure..."
+          echo " failed — cleaning up dev infrastructure..."
           terraform destroy \
             -var="resource_group_name=flipkartapp-dev-35" \
             -var="location=canadacentral" \
