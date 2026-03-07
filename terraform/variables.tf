@@ -71,14 +71,6 @@ variable "keyvault_name" {
   default     = "flipkart-kv"
 }
 
-# variable "sql_server_name" {
-#   type = string
-
-#   validation {
-#     condition     = can(regex("^[0-9a-z]([-0-9a-z]{0,61}[0-9a-z])?$", var.sql_server_name))
-#     error_message = "SQL Server name must be lowercase letters, numbers, or hyphens."
-#   }
-# }
 
 variable "tags" {
   description = "Tags for all resources"
